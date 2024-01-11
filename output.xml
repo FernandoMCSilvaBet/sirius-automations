@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.11.5 on win32)" generated="20240110 17:31:05.836" rpa="false" schemaversion="3">
+<suite id="s1" name="CN01-NovaConta" source="c:\Robot\Boomg\TestCases\CN01-NovaConta.robot">
+<test id="s1-t1" name="CT 01.03 - Validar botão &quot;Passo 1&quot; em Cadastro de conta" line="29">
+<kw name="Dado que acesse o Boomg" library="Setup_Teardown" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240110 17:31:06.337" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20240110 17:31:06.337" endtime="20240110 17:31:07.852"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240110 17:31:07.852" endtime="20240110 17:31:07.971"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URLHML}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240110 17:31:07.971" level="INFO">Opening url 'https://staging.boomg.com/'</msg>
+<status status="PASS" starttime="20240110 17:31:07.971" endtime="20240110 17:31:24.122"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//a[contains(@class,'logo')])[1]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240110 17:31:24.123" endtime="20240110 17:31:24.149"/>
+</kw>
+<status status="PASS" starttime="20240110 17:31:06.337" endtime="20240110 17:31:24.149"/>
+</kw>
+<kw name="Dado que clico no botão &quot;Cadastrar-se&quot;" library="01-NovaConta">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//span[contains(.,'Cadastre-se')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240110 17:31:24.149" endtime="20240110 17:31:24.166"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@type='button'][contains(.,'Cadastre-se')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240110 17:31:24.166" level="INFO">Clicking element '//button[@type='button'][contains(.,'Cadastre-se')]'.</msg>
+<status status="PASS" starttime="20240110 17:31:24.166" endtime="20240110 17:31:24.229"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//div[contains(.,'Criar Conta')])[6]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240110 17:31:24.230" endtime="20240110 17:31:24.458"/>
+</kw>
+<status status="PASS" starttime="20240110 17:31:24.149" endtime="20240110 17:31:24.459"/>
+</kw>
+<kw name="Quando preencho CPF válido" library="01-NovaConta">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[contains(@name,'cpf')]</arg>
+<arg>text=${CPFNovo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240110 17:31:24.461" level="INFO">Typing text '17713750789' into text field '//input[contains(@name,'cpf')]'.</msg>
+<status status="PASS" starttime="20240110 17:31:24.460" endtime="20240110 17:31:24.632"/>
+</kw>
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>//input[contains(@name,'cpf')]</arg>
+<arg>\\09</arg>
+<doc>*DEPRECATED in SeleniumLibrary 4.0.* use `Press Keys` instead.</doc>
+<msg timestamp="20240110 17:31:24.632" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<status status="PASS" starttime="20240110 17:31:24.632" endtime="20240110 17:31:24.709"/>
+</kw>
+<status status="PASS" starttime="20240110 17:31:24.459" endtime="20240110 17:31:24.709"/>
+</kw>
+<kw name="E clico no botão Passo 2" library="01-NovaConta">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@type='button'][contains(.,'Avançar')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240110 17:31:24.711" level="INFO">Clicking element '//button[@type='button'][contains(.,'Avançar')]'.</msg>
+<status status="PASS" starttime="20240110 17:31:24.710" endtime="20240110 17:31:24.759"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[contains(@name,'email')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240110 17:31:30.147" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-25.png"&gt;&lt;img src="selenium-screenshot-25.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240110 17:31:30.160" level="FAIL">Element '//input[contains(@name,'email')]' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20240110 17:31:24.760" endtime="20240110 17:31:30.164"/>
+</kw>
+<status status="FAIL" starttime="20240110 17:31:24.709" endtime="20240110 17:31:30.165"/>
+</kw>
+<kw name="E clico no botão Passo 1" library="01-NovaConta">
+<status status="NOT RUN" starttime="20240110 17:31:30.165" endtime="20240110 17:31:30.165"/>
+</kw>
+<kw name="Então valido que sistema volta para tela de CPF e dados inciais de cadastro" library="01-NovaConta">
+<status status="NOT RUN" starttime="20240110 17:31:30.165" endtime="20240110 17:31:30.165"/>
+</kw>
+<kw name="Fechar navegador" library="Setup_Teardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240110 17:31:30.165" endtime="20240110 17:31:32.347"/>
+</kw>
+<status status="PASS" starttime="20240110 17:31:30.165" endtime="20240110 17:31:32.347"/>
+</kw>
+<doc>Caso de testes valida se botão "Passo 1" está funcionando corretamente</doc>
+<tag>NovaConta</tag>
+<status status="FAIL" starttime="20240110 17:31:06.337" endtime="20240110 17:31:32.347">Element '//input[contains(@name,'email')]' not visible after 5 seconds.</status>
+</test>
+<doc>Modúlo de cadastro do usuário no sistema Boomg</doc>
+<status status="FAIL" starttime="20240110 17:31:05.841" endtime="20240110 17:31:32.347"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">NovaConta</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="CN01-NovaConta">CN01-NovaConta</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240110 17:31:06.326" level="WARN">C:\Users\estrelabet\AppData\Local\Programs\Python\Python311\Lib\site-packages\RPA\Dialogs\library.py:120: FutureWarning: `RPA.Dialogs` got deprecated and will be no longer maintained, please use `RPA.Assistant` instead and check the migration guide and release notes that describe the differences (https://updates.robocorp.com/release/Gfko5-rpaframework-2200)
+  deprecation(
+</msg>
+<msg timestamp="20240110 17:31:24.632" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+</errors>
+</robot>

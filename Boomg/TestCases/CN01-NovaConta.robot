@@ -10,7 +10,7 @@ CT 01.01 - Realizar cadastro de conta com Sucesso
     [Tags]    NovaConta    Funcional        
     Dado que clico no botão "Cadastrar-se"
     Quando preencho CPF real
-    E clico no botão Passo 2
+    E clico no botão Passo 2 New
     E preencho Email real
     E preencho Senha válida
     E preencho Confirmação de senha válida

@@ -141,7 +141,20 @@ E clico em link "Reenviar código" (Prf)
 
 # --3.7
 E altero o campo "Email" (Prf)
+    Input Text                             //input[contains(@name,'email')]               text=fernandomoraissilva@gmail.co
+
+E realizo ajuste de massa de email (Prf)
     Input Text                             //input[contains(@name,'email')]               text=${EmailCadastrado}
+    Wait Until Element Is Visible          //span[contains(.,'Salvar Dados Pessoais')]
+    Click Element                          //span[contains(.,'Salvar Dados Pessoais')]
+
+# --3.8
+E clico em "Validar E-mail" (Prf)
+    Click Element                          //button[@type='button'][contains(.,'Validar E-mail')]
+
+Então clico em "Entendido" (Prf)
+    Wait Until Element Is Visible           //div[@class='modal-box__content__text has-background-primary-light'][contains(.,'ATENÇÃO!Enviamos para seu e-mail uma confirmação de mudança em seu cadastro.Acesse seu e-mail e clique no botão “Validar E-mail” para finalizar seu processo de cadastro!')]
+    Click Element                           //button[@type='button'][contains(.,'Entendido')]
 
 # --3.10
 E clico em opção "Ofertas por email" (Lgn)

@@ -75,16 +75,18 @@ CT 03.07 - Realizar alteração de email em dados pessoais
     E altero o campo "Email" (Prf)
     E clico em "Salvar dados pessoais" (Prf)
     Então recebo mensagem de sucesso "Cadastro atualizado com sucesso" na tela (Prf)
+    E realizo ajuste de massa de email (Prf)
 
 CT 03.08 - Realizar validação de email em dados pessoais
     [Documentation]     Caso de teste realiza validação de email em dados pessoais do cliente
-    [Tags]    Perfil    Funcional            
+    [Tags]    Perfil    Funcional
     Dado que clico no botão "Perfil" (Prf)
     Quando seleciono submenu "Perfil" (Prf)
+    E clico em "Validar E-mail" (Prf)
+    Então clico em "Entendido" (Prf)
 
-CT 03.09 - Realizar validação de email em dados pessoais
 
-CT 03.10 - Validar checkbox "Ofertas por email"
+CT 03.09 - Validar checkbox "Ofertas por email"
     [Documentation]     Caso de teste realiza validação do checkbox "Aceito receber novidades e ofertas por E-MAIL"
     [Tags]    Perfil    Funcional            
     Dado que clico no botão "Perfil" (Prf)
@@ -93,7 +95,7 @@ CT 03.10 - Validar checkbox "Ofertas por email"
     E clico em "Salvar dados pessoais" (Prf)
     Então recebo mensagem de sucesso "Cadastro atualizado com sucesso" na tela (Prf)
 
-CT 03.11 - Validar checkbox "Ofertas por SMS"
+CT 03.10 - Validar checkbox "Ofertas por SMS"
     [Documentation]     Caso de teste realiza validação do checkbox "Aceito receber novidades e ofertas por SMS"
     [Tags]    Perfil    Funcional            
     Dado que clico no botão "Perfil" (Prf)

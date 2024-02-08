@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.11.5 on win32)" generated="20240207 10:30:29.014" rpa="false" schemaversion="3">
+<suite id="s1" name="CN06-Esportes" source="c:\Robot\Boomg\TestCases\CN06-Esportes.robot">
+<test id="s1-t1" name="CT 06.04 - Validar o botão Voleibol superior" line="30">
+<kw name="Dado que acesse o Boomg" library="Setup_Teardown" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240207 10:30:29.656" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20240207 10:30:29.656" endtime="20240207 10:30:31.415"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240207 10:30:31.415" endtime="20240207 10:30:31.549"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URLHML}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240207 10:30:31.550" level="INFO">Opening url 'https://staging.boomg.com/'</msg>
+<status status="PASS" starttime="20240207 10:30:31.549" endtime="20240207 10:30:53.109"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//a[contains(@class,'logo')])[1]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240207 10:30:53.109" endtime="20240207 10:30:53.135"/>
+</kw>
+<status status="PASS" starttime="20240207 10:30:29.656" endtime="20240207 10:30:53.135"/>
+</kw>
+<kw name="Dado que acesso o Menu ESPORTES" library="06-Esportes">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//span[@class='default-header__section-label'][contains(.,'Esportes')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240207 10:30:53.136" endtime="20240207 10:30:53.170"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[@class='default-header__section-label'][contains(.,'Esportes')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240207 10:30:53.170" level="INFO">Clicking element '//span[@class='default-header__section-label'][contains(.,'Esportes')]'.</msg>
+<status status="PASS" starttime="20240207 10:30:53.170" endtime="20240207 10:30:54.663"/>
+</kw>
+<status status="PASS" starttime="20240207 10:30:53.136" endtime="20240207 10:30:54.663"/>
+</kw>
+<kw name="Quando clico no botão Voleibol superior" library="06-Esportes">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[@class='we-nav-section-title'][contains(.,'Voleibol')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240207 10:30:59.926" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240207 10:30:59.927" level="FAIL">Element '//div[@class='we-nav-section-title'][contains(.,'Voleibol')]' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20240207 10:30:54.663" endtime="20240207 10:30:59.927"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='we-nav-section-title'][contains(.,'Voleibol')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240207 10:30:59.927" endtime="20240207 10:30:59.927"/>
+</kw>
+<status status="FAIL" starttime="20240207 10:30:54.663" endtime="20240207 10:30:59.927"/>
+</kw>
+<kw name="Então entro na página Voleibol superior" library="06-Esportes">
+<status status="NOT RUN" starttime="20240207 10:30:59.927" endtime="20240207 10:30:59.927"/>
+</kw>
+<kw name="Fechar navegador" library="Setup_Teardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240207 10:30:59.927" endtime="20240207 10:31:02.203"/>
+</kw>
+<status status="PASS" starttime="20240207 10:30:59.927" endtime="20240207 10:31:02.203"/>
+</kw>
+<doc>Teste valida o botão Voleibol superior</doc>
+<tag>Esportes</tag>
+<tag>Funcional</tag>
+<status status="FAIL" starttime="20240207 10:30:29.656" endtime="20240207 10:31:02.203">Element '//div[@class='we-nav-section-title'][contains(.,'Voleibol')]' not visible after 5 seconds.</status>
+</test>
+<doc>Modúlo de Esportes do usuário no sistema Boomg</doc>
+<status status="FAIL" starttime="20240207 10:30:29.019" endtime="20240207 10:31:02.203"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Esportes</stat>
+<stat pass="0" fail="1" skip="0">Funcional</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="CN06-Esportes">CN06-Esportes</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240207 10:30:29.632" level="WARN">C:\Users\estrelabet\AppData\Local\Programs\Python\Python311\Lib\site-packages\RPA\Dialogs\library.py:120: FutureWarning: `RPA.Dialogs` got deprecated and will be no longer maintained, please use `RPA.Assistant` instead and check the migration guide and release notes that describe the differences (https://updates.robocorp.com/release/Gfko5-rpaframework-2200)
+  deprecation(
+</msg>
+<msg timestamp="20240207 10:30:29.647" level="ERROR">Error in file 'c:\Robot\Boomg\TestCases\CN06-Esportes.robot' on line 3: Resource file '..\Resources\Keywords\04-Esportes.robot' does not exist.</msg>
+</errors>
+</robot>

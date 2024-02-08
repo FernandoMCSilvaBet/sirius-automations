@@ -7,13 +7,13 @@ Library    RPA.Dialogs
 # --2.1
 Dado que clico no botão "Entrar" (Lgn)
     Click Element                    //button[@class='user-header-menu__button-login'][contains(.,'Entrar')]
-    Wait Until Element Is Visible    //input[contains(@name,'usuario')]
+    Wait Until Element Is Visible    ${CampoUsuario}
 
 Quando preencho Email real (Lgn)
-    Input Text                      locator=//input[contains(@name,'usuario')]      text=${EmailCadastrado}
+    Input Text                      locator=${CampoUsuario}      text=${EmailCadastrado}
 
 E preencho Senha válida (Lgn)
-    Input Text                      locator=//input[contains(@name,'senha')]        text=${SenhaCadastrada}
+    Input Text                      locator=${CampoSenha}        text=${SenhaCadastrada}
 
 E clico no botão "Entrar em Conta" (Lgn)
     Click Element                    //button[@type='submit'][contains(.,'Entrar na Conta')]
@@ -25,15 +25,15 @@ Então recebo mensagem de Sucesso "Login realizado com sucesso" na tela (Lgn)
 
 # -- 2.2
 Quando preencho CPF real (Lgn)
-    Input Text                      locator=//input[contains(@name,'usuario')]      text=${CPFCadastrado}
+    Input Text                      locator=${CampoUsuario}      text=${CPFCadastrado}
 
 # -- 2.3
 Quando preencho Telefone real (Lgn)
-    Input Text                      locator=//input[contains(@name,'usuario')]      text=${TelefoneCadastrado}
+    Input Text                      locator=${CampoUsuario}      text=${TelefoneCadastrado}
 
 # -- 2.4
 Quando preencho Email inválido (Lgn)
-    Input Text                      locator=//input[contains(@name,'usuario')]      text=${EmailInválido}
+    Input Text                      locator=${CampoUsuario}      text=${EmailInválido}
 
 Então recebo mensagem de erro "Usuário ou senha incorretos" na tela (Lgn)
     Wait Until Element Is Visible    //p[@class='has-text-error'][contains(.,'Usuário ou senha incorretos')]
@@ -42,13 +42,13 @@ Então recebo mensagem de erro "Usuário ou senha incorretos" na tela (Lgn)
 
 # -- 2.5
 Quando preencho CPF inválido (Lgn)
-    Input Text                      locator=//input[contains(@name,'usuario')]      text=${CPFInválido}
+    Input Text                      locator=${CampoUsuario}      text=${CPFInválido}
 
 # -- 2.6
 Quando preencho Telefone inválido (Lgn)
-    Input Text                      locator=//input[contains(@name,'usuario')]      text=${TelefoneInválido}
+    Input Text                      locator=${CampoUsuario}      text=${TelefoneInválido}
 
-# -- 2.7
+# -- 2.2
 Então recebo mensagem de erro "Usuário inválido" na tela (Lgn)
     Wait Until Element Is Visible    //span[contains(.,'Usuário Inválido')]
     Capture Page Screenshot
@@ -63,8 +63,8 @@ E clico no link "Esqueceu a senha?" (Lgn)
     Click Element                    //a[contains(@class,'paragraph')]
 
 Quando preencho Email real em recuperação de senha (Lgn)
-    Wait Until Element Is Visible   //input[contains(@name,'e-mail*')]
-    Input Text                      locator=//input[contains(@name,'e-mail*')]      text=${EmailCadastrado}
+    Wait Until Element Is Visible   ${CampoEmailLogin}
+    Input Text                      locator=${CampoEmailLogin}      text=${EmailCadastrado}
 
 E clico no botão "Enviar código" (Lgn)
     Click Element                    //button[@type='submit'][contains(.,'Enviar código')]
@@ -75,8 +75,8 @@ Então recebo mensagem de erro "Código foi enviado para o seu e-mail." na tela 
 
 # -- 2.10
 Quando preencho Email inválido em recuperação de senha (Lgn)
-    Wait Until Element Is Visible   //input[contains(@name,'e-mail*')]
-    Input Text                      locator=//input[contains(@name,'e-mail*')]      text=${EmailInválido}
+    Wait Until Element Is Visible   ${CampoEmailLogin}
+    Input Text                      locator=${CampoEmailLogin}      text=${EmailInválido}
     Wait Until Element Is Visible   //span[contains(.,'Se as informações estiverem corretas, você receberá um email em breve.')]
 
 Então recebo mensagem de erro "E-mail inválido" na tela (Lgn)
@@ -142,7 +142,7 @@ E preencho Código vencido (Lgn)
     Wait Until Element Is Visible   //input[contains(@name,'código*')]
     Input Text                      locator=//input[contains(@name,'código*')]         text=${CódigoVencido}
 
-# -- 2.17
+# -- 2.12
 Quando clico no link " Cadastre-se agora!" (Lgn)
     Click Element                    //a[contains(.,'Cadastre-se agora!')]
 
@@ -160,12 +160,13 @@ E clico em perfil (Lgn)
 
 E clico no botão "Sair" (Lgn)
     Click Element                    //button[@type='button'][contains(.,'Sair')]
+    Sleep    2s
 
 Então valido tela de Login com campos preenchidos (Lgn)
-    Wait Until Element Is Visible     //input[contains(@name,'usuario')]
-    ${texto_do_campo} =    Get Value  //input[contains(@name,'usuario')]
+    Wait Until Element Is Visible     ${CampoUsuario}
+    ${texto_do_campo} =    Get Value  ${CampoUsuario}
     Should Be Equal As Strings    ${texto_do_campo}    ${EmailCadastrado}
-    Wait Until Element Is Visible     //input[contains(@name,'senha')]
+    Wait Until Element Is Visible     ${CampoSenha}
     Capture Page Screenshot
 
 # -- 2.19
@@ -173,7 +174,7 @@ E clico em opção "Exibir Senha" (Lgn)
     Click Element                    //i[contains(@class,'fas fa-eye')]
 
 Então valido campo "Senha"
-    Wait Until Element Is Visible     //input[contains(@name,'senha')] 
-    ${texto_do_campo} =    Get Value   //input[contains(@name,'senha')] 
+    Wait Until Element Is Visible     ${CampoSenha} 
+    ${texto_do_campo} =    Get Value   ${CampoSenha} 
     Should Be Equal As Strings    ${texto_do_campo}    ${SenhaCadastrada}
     Capture Page Screenshot

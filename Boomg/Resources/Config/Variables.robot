@@ -24,4 +24,16 @@ ${TelefoneCadastradoB}      21987835333
 ${TelefoneInválido}         219878353
 
 ${CódigoInválido}           ABCD
-${CódigoVencido}        
+${CódigoVencido}            
+
+
+# Nova Conta
+${CampoCPF}                            //input[contains(@name,'cpf')]
+${CampoEmail}                          //input[contains(@name,'email')]
+${CampoTelefone}                       //input[contains(@name,'telefone')]
+${BotaoAvancar}                        //button[@type='button'][contains(.,'Avançar')]
+
+# Login
+${CampoUsuario}                        //input[contains(@name,'usuario')]
+${CampoSenha}                          //input[contains(@name,'senha')]
+${CampoEmailLogin}                     //input[contains(@name,'e-mail*')]

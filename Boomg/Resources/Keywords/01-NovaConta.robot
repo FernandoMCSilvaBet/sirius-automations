@@ -12,103 +12,92 @@ ${TelefoneReal}             21965545344
 
 # --1.1
 Quando preencho CPF real
-    Input Text                       locator=//input[contains(@name,'cpf')]     text=${CPFReal}
-    Press Key                        //input[contains(@name,'cpf')]    \\09
+    Input Text                       locator=${CampoCPF}     text=${CPFReal}
+    Press Key                        ${CampoCPF}    \\09
     Wait Until Element Is Visible    //input[@name='nome']
 
 E preencho Email real
-    Input Text                      locator=//input[contains(@name,'email')]      text=${EmailReal}
+    Input Text                      locator=${CampoEmail}       text=${EmailReal}
 
 E preencho Telefone real
-    Input Text                      locator=//input[contains(@name,'telefone')]   text=${TelefoneReal}
+    Input Text                      locator=${CampoTelefone}   text=${TelefoneReal}
 
 Então recebo mensagem de Sucesso "Cadastro de Sucesso" na tela
     Wait Until Element Is Visible    //div[@class='notyf__message'][contains(.,'Cadastro realizado com sucesso.')]
     Capture Page Screenshot    CT1.1.png
 
 # -- 1.2
-Dado que clico no botão "Cadastrar-se"
-     Wait Until Element Is Visible   //span[contains(.,'Cadastre-se')]
-     Click Element                   //button[@type='button'][contains(.,'Cadastre-se')]
+Dado que clico no botão "Cadastrar"
+     Wait Until Element Is Visible   //button[@type='button'][contains(.,'Cadastrar')]
+     Click Element                   //button[@type='button'][contains(.,'Cadastrar')]
      Wait Until Element Is Visible   (//div[contains(.,'Criar Conta')])[6]
 
 Quando preencho CPF já cadastrado
-    Input Text                       locator=//input[contains(@name,'cpf')]     text=${CPFCadastrado}
-    Press Key                       //input[contains(@name,'cpf')]    \\09
+    Input Text                       locator=${CampoCPF}     text=${CPFCadastrado}
+    Press Key                        ${CampoCPF}    \\09
 
 Então recebo mensagem de erro "CPF registrado" na tela
     Wait Until Element Is Visible    //span[contains(.,'CPF já cadastrado. Favor contate o suporte.')]
-    # Wait Until Element Is Visible    //p[@class='paragraph has-text-error'][contains(.,'Alguns erros precisam ser corrigidos')]
-    # Wait Until Element Is Visible    //div[@class='input-message has-text-error'][contains(.,'Esse número de CPF já se encontra registrado. Por favor contacte o apoio ao cliente.')]
     Capture Page Screenshot    CT1.2.png
 
 # -- 1.3
 Quando preencho CPF válido
-    Input Text                      locator=//input[contains(@name,'cpf')]     text=${CPFNovo}
-    Press Key                       //input[contains(@name,'cpf')]    \\09
-    # Wait Until Element Is Visible   //input[@name='nome']
+    Input Text                      locator=${CampoCPF}     text=${CPFNovo}
+    Press Key                       ${CampoCPF}    \\09
 
 E clico no botão Passo 2 New                   
-    Click Element                     //button[@type='button'][contains(.,'Avançar')]
+    Click Element                     ${BotaoAvancar}
 
 E clico no botão Passo 2                   
-    Click Element                     //button[@type='button'][contains(.,'Avançar')]
+    Click Element                     ${BotaoAvancar}
     Sleep    5s
-    Click Element                     //button[@type='button'][contains(.,'Avançar')]
-    # Wait Until Element Is Visible    //input[contains(@name,'email')]
+    Click Element                     ${BotaoAvancar}
 
-E clico no botão Passo 1
-    Click Element                   //button[@type='button'][contains(.,'Passo 1')]
 
-Então valido que sistema volta para tela de CPF e dados inciais de cadastro
-    Wait Until Element Is Visible    //button[@type='button'][contains(.,'Avançar')]
-    Capture Page Screenshot    CT1.3.png
-
-# -- 1.4
+# -- 1.3
 Quando preencho CPF inválido
-    Input Text                      locator=//input[contains(@name,'cpf')]     text=${CPFInválido}
+    Input Text                      locator=${CampoCPF}     text=${CPFInválido}
+    Press Key                       ${CampoCPF}    \\09
 
 Então recebo mensagem de erro "CPF inválido" na tela
     # Wait Until Element Is Visible    //p[@class='paragraph has-text-error'][contains(.,'Alguns erros precisam ser corrigidos')]
     Wait Until Element Is Visible    //span[contains(.,'CPF inválido')]
     ${ct} =    Get Variable Value    ${TEST NAME}
-    Run Keyword If    '${ct}' == 'CT 01.04 - Tentar realizar cadastro de conta sem CPF válido'    Capture Page Screenshot    CT1.4.png
-    Run Keyword If    '${ct}' == 'CT 01.07 - Tentar cadastrar com CPF com óbito'                  Capture Page Screenshot    CT1.7.png
+    Run Keyword If    '${ct}' == 'CT 01.03 - Tentar realizar cadastro de conta sem CPF válido'    Capture Page Screenshot    CT1.3.png
+    Run Keyword If    '${ct}' == 'CT 01.06 - Tentar cadastrar com CPF com óbito'                  Capture Page Screenshot    CT1.6.png
+
+# -- 1.4
+Quando preencho CPF inválido na receita
+    Input Text                      locator=${CampoCPF}       text=${CPFInválidoReceita}
+    Press Key                       ${CampoCPF}    \\09
+    Capture Page Screenshot    CT1.4.png
 
 # -- 1.5
-Quando preencho CPF inválido na receita
-    Input Text                      locator=//input[contains(@name,'cpf')]       text=${CPFInválidoReceita}
+Quando preencho CPF de menor
+    Input Text                      locator=${CampoCPF}       text=${CPFMenor}
+
+Então recebo mensagem de erro "Você precisa ter mais de 18 anos" na tela
+    Press Key                       ${CampoCPF}    \\09
+    Wait Until Element Is Visible    //span[contains(.,'Você precisa ter mais de 18 anos')]
     Capture Page Screenshot    CT1.5.png
 
 # -- 1.6
-Quando preencho CPF de menor
-    Input Text                      locator=//input[contains(@name,'cpf')]       text=${CPFMenor}
-
-Então recebo mensagem de erro "Você precisa ter mais de 18 anos" na tela
-    Press Key                       //input[contains(@name,'cpf')]    \\09
-    Wait Until Element Is Visible    //span[contains(.,'Você precisa ter mais de 18 anos')]
-    Capture Page Screenshot    CT1.6.png
+Quando preencho CPF em óbito
+    Input Text                      locator=${CampoCPF}       text=${CPFObito}
+    Press Key                       ${CampoCPF}    \\09
 
 # -- 1.7
-Quando preencho CPF em óbito
-    Input Text                      locator=//input[contains(@name,'cpf')]       text=${CPFObito}
-
-# Então recebo mensagem de erro "Você precisa ter mais de 18 anos" na tela
-#     Wait Until Element Is Visible    //p[@class='paragraph has-text-error'][contains(.,'Alguns erros precisam ser corrigidos')]
-#     Wait Until Element Is Visible    //span[contains(.,'Você precisa ter mais de 18 anos')]
-#     Capture Page Screenshot
-
-# -- 1.8
 E preencho Email inválido
-    Input Text                      locator=//input[contains(@name,'email')]     text=${EmailInválido}
+    Input Text                      locator=${CampoEmail}      text=${EmailInválido}
+    Press Key                       ${CampoEmail}     \\09
     
 Então recebo mensagem de erro "Email inválido" na tela
     Wait Until Element Is Visible    //span[contains(.,'E-mail inválido')]
-    Capture Page Screenshot    CT1.8.png
+    Capture Page Screenshot    CT1.7.png
 
-# -- 1.9
+# -- 1.8
 E preencho Email válido já cadastrado
-    Input Text                      locator=//input[contains(@name,'email')]      text=${EmailCadastrado}
+    Input Text                      locator=${CampoEmail}       text=${EmailCadastrado}
 
 E preencho Senha válida
     Input Text                      locator=//input[@name='senha']                text=${Senha}
@@ -117,8 +106,8 @@ E preencho Confirmação de senha válida
     Input Text                      locator=//input[contains(@name,'senha-b')]    text=${Senha}
 
 E preencho Telefone válido
-    Input Text                      locator=//input[contains(@name,'telefone')]   text=${Telefone}
-    Press Key                       //input[contains(@name,'telefone')]    \\09
+    Input Text                      locator=${CampoTelefone}   text=${Telefone}
+    Press Key                       ${CampoTelefone}    \\09
 
 E confirmo maior idade
     Click Element                   locator=//*[@id="app"]/div[2]/div/div/div[1]/div[2]/div[1]/form/div[2]/div/div[6]/div/label/div/span
@@ -128,11 +117,11 @@ E clico no botão "Finalizar Cadastro"
     
 Então recebo mensagem de erro "Login já existe" na tela
     Wait Until Element Is Visible    //span[contains(.,'Email já cadastrado. Favor contate o suporte.')]
-    Capture Page Screenshot    CT1.9.png
+    Capture Page Screenshot    CT1.8.png
  
-# -- 1.10
+# -- 1.9
 E preencho Email válido
-    Input Text                        locator=//input[contains(@name,'email')]      text=${Emailválido}
+    Input Text                        locator=${CampoEmail}       text=${Emailválido}
 
 E preencho Senha inválida
     Input Text                        locator=//input[@name='senha']                text=${SenhaInválida} 
@@ -141,50 +130,51 @@ Então recebo mensagem de erro "Senha inválida" na tela
     Wait Until Element Is Visible     //span[contains(.,'Senha precisa ter no mínimo 8 caracteres')]
     Click Element                     locator=//span[contains(.,'Senha precisa ter no mínimo 8 caracteres')]
     Wait Until Element Is Visible     //div[@class='v-popper__inner'][contains(.,'Sua senha deve conter pelo menos: Uma letra (maiúscula e minúscula) Um Número Mínimo 8 caracteres')]
-    Capture Page Screenshot    CT1.10.png
+    Capture Page Screenshot    CT1.9.png
 
-# -- 1.11
+# -- 1.10
 E preencho Confirmação de senha inválida
     Input Text                      locator=//input[contains(@name,'senha-b')]    text=${SenhaInválida}
 
 Então recebo mensagem de erro "Senhas diferentes" na tela
     Wait Until Element Is Visible     //span[contains(.,'Senhas Diferentes')]
-    Capture Page Screenshot    CT1.11.png
+    Capture Page Screenshot    CT1.10.png
 
-# -- 1.12
+# -- 1.11
 E preencho Telefone inválido
-    Input Text                      locator=//input[contains(@name,'telefone')]   text=${TelefoneInválido}
+    Input Text                      locator=${CampoTelefone}   text=${TelefoneInválido}
+    Press Key                       ${CampoTelefone}    \\09
 
 Então recebo mensagem de erro "Número inválido" na tela
     Wait Until Element Is Visible    //span[contains(.,'Número de celular inválido')]
-    Capture Page Screenshot    CT1.12.png
+    Capture Page Screenshot    CT1.11.png
 
-# -- 1.13
+# -- 1.12
 E preencho Telefone válido já cadastrado
-    Input Text                      locator=//input[contains(@name,'telefone')]   text=${TelefoneCadastrado}
+    Input Text                      locator=${CampoTelefone}   text=${TelefoneCadastrado}
 
 Então recebo mensagem de erro "Número do telefone já existe" na tela
     Wait Until Element Is Visible    //span[contains(.,'Celular já cadastrado. Favor contate o suporte')]
+    Capture Page Screenshot    CT1.12.png
+
+# -- 1.13
+Então recebo mensagem de erro "Maior idade" na tela
+    Wait Until Element Is Visible    //span[contains(.,'É necessários aceitar os termos e confirmar idade.')]
     Capture Page Screenshot    CT1.13.png
 
 # -- 1.14
-Então recebo mensagem de erro "Maior idade" na tela
-    Wait Until Element Is Visible    //span[contains(.,'É necessários aceitar os termos e confirmar idade.')]
-    Capture Page Screenshot    CT1.14.png
-
-# -- 1.15
 E clico no link "Termos e Condições"
     Wait Until Element Is Visible     locator=//span[@class='terms-conditions'][contains(.,'Termos e Condições')]
     Click Element                     locator=(//span[contains(.,'Termos e Condições')])[2]
 
 Então valido tela de "Termos e Condições"
     Wait Until Element Is Visible     locator=//span[@itemprop='name'][contains(.,'Termos e Condições')]
-    Capture Page Screenshot    CT1.15.png
+    Capture Page Screenshot    CT1.14.png
 
-# -- 1.16
+# -- 1.15
 Quando clico no link "Login aqui"
     Click Element                     locator=//a[contains(.,'login!')]
 
 Então valido tela de "Login"
     Wait Until Element Is Visible     //div[@class='modal-box__content'][contains(.,'Bem-vindo de volta!E-mail, Celular ou CPF*Senha*Lembrar loginEsqueceu a senha?Entrar na ContaNão possui a conta? Cadastre-se agora!')]
-    Capture Page Screenshot    CT1.16.png
+    Capture Page Screenshot    CT1.15.png

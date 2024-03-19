@@ -67,8 +67,8 @@ CT 02.07 - Tentar realizar Login sem preencher campo Usuário
     E clico no botão "Entrar em Conta" (Lgn)
     Então recebo mensagem de erro "Usuário inválido" na tela (Lgn)
 
-CT 02.08 - Tentar realizar Login sem preencher campo Usuário
-    [Documentation]     Caso de teste tenta realizar login sem preencher campo obrigatório (Usuário)
+CT 02.08 - Tentar realizar Login sem preencher campo Senha
+    [Documentation]     Caso de teste tenta realizar login sem preencher campo obrigatório (Senha)
     [Tags]    Login    Exceção        
     Dado que clico no botão "Entrar" (Lgn)
     Quando preencho Telefone real (Lgn)

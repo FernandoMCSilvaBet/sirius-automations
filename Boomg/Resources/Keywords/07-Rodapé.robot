@@ -52,7 +52,7 @@ Dado que clico no botão Jogo Consciente
     Execute Javascript              window.scrollTo(0, document.body.scrollHeight);
     Wait Until Element Is Visible   (//a[@href='/jogo-consciente'][contains(.,'Jogo Consciente')])[2]
     Click Element                   (//a[@href='/jogo-consciente'][contains(.,'Jogo Consciente')])[2]
-Então entro na página Jogo Consciente
+Então entro na página Jogo Consciente (Rodapé)
     Wait Until Element Is Visible   //div[@class='container'][contains(.,'Jogo ConscienteGarantindo que todos apostem de maneira responsável.')]
 
     # --7.6
@@ -64,7 +64,22 @@ Então entro na página Promoções
     Wait Until Element Is Visible   //h1[@class='h1'][contains(.,'Promoções')]
 
     # --7.7
-Dado que clico no botão pix de Métodos de pagamento do rodapé
+Dado que clico no botão "Entrar" (Rodapé)
+    Click Element                    //button[@class='user-header-menu__button-login'][contains(.,'Entrar')]
+    Wait Until Element Is Visible    //input[contains(@name,'usuario')]
+
+Quando preencho Email real (Rodapé)
+    Input Text                      locator=//input[contains(@name,'usuario')]      text=${EmailCadastrado}
+
+E preencho Senha válida (Rodapé)
+    Input Text                      locator=//input[contains(@name,'senha')]        text=${SenhaCadastrada}
+
+E clico no botão "Entrar em Conta" (Rodapé)
+    Click Element                    //button[@type='submit'][contains(.,'Entrar na Conta')]
+    # Wait Until Element Is Visible    //a[contains(@class,'user-header-menu__button-profile')]
+
+
+E que clico no botão pix de Métodos de pagamento do rodapé
     Execute Javascript              window.scrollTo(0, document.body.scrollHeight);
     Wait Until Element Is Visible   //div[contains(@class,'default-footer__payment_methods__item')]
     Click Element                   //div[contains(@class,'default-footer__payment_methods__item')]
@@ -109,9 +124,25 @@ Então entro na página Regras e Procedimentos
 
     # --7.12
 Dado que clico no botão GAMING CURACAO
-    Execute Javascript              window.scrollTo(0, document.body.scrollHeight);
-    Wait Until Element Is Visible   <img src="/images/gc - logo.png">
-    Click Element                   <img src="/images/gc - logo.png">
+    Execute Javascript                window.scrollTo(0, document.body.scrollHeight);
+    # Wait Until Element Is Visible     //img[contains(@src, '/images/gc-logo.png')]
+    # Wait Until Element Is Visible     //img[contains(@alt, 'GAMING CURACAO UNVERIFIED LICENSEE CLICK FOR MORE INFORMATION')]
+    # Wait Until Element Is Visible       //img[contains(@alt, 'GAMING CURACAO UNVERIFIED LICENSEE')]
+    # Wait Until Element Is Visible       (//img[contains(@alt, 'GAMING CURACAO UNVERIFIED LICENSEE')])[1]
+    # Wait Until Element Is Visible     //img[@src='/images/gc-logo.png']
+    # Wait Until Element Is Visible     //img[contains(@width,'120')]
+    # Wait Until Element Is Visible     //img[@width='120']
+    # Wait Until Element Is Visible       (//img[contains(@src, 'gc-logo.png')])[1]
+    # Wait Until Element Is Visible     @FindBy(xpath = "//img[@src='/images/gc-logo.png']")
+
+
+    # ${element} =    Get WebElement    //img[contains(@src, '/images/gc-logo.png')]                              
+    # # ${element} =    Get WebElement    xpath: //img[contains(@src, '/images/gc-logo.png')]
+
+    # Wait Until Element Is Visible   ${element}
+    # Click Element                   ${element}
+    
+
 Então entro na página GAMING CURACAO
     # O comando abaixo serve para alterar a aba que estamos testando
     ${handles_before}   Get Window Handles

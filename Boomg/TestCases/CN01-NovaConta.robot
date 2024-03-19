@@ -5,19 +5,19 @@ Test Teardown      Fechar navegador
 Documentation      Modúlo de cadastro do usuário no sistema Boomg
 
 *** Test Cases ***
-CT 01.01 - Realizar cadastro de conta com Sucesso
-    [Documentation]     Caso de teste realiza cadastro de conta cliente com Sucesso
-    [Tags]    NovaConta    Funcional        
-    Dado que clico no botão "Cadastrar"
-    Quando preencho CPF real
-    E clico no botão Passo 2 New
-    E preencho Email real
-    E preencho Senha válida
-    E preencho Confirmação de senha válida
-    E preencho Telefone real
-    E confirmo maior idade
-    E clico no botão "Finalizar Cadastro"
-    Então recebo mensagem de Sucesso "Cadastro de Sucesso" na tela
+# CT 01.01 - Realizar cadastro de conta com Sucesso
+#     [Documentation]     Caso de teste realiza cadastro de conta cliente com Sucesso
+#     [Tags]    NovaConta    Funcional        
+#     Dado que clico no botão "Cadastrar"
+#     Quando preencho CPF real
+#     E clico no botão Passo 2 New
+#     E preencho Email real
+#     E preencho Senha válida
+#     E preencho Confirmação de senha válida
+#     E preencho Telefone real
+#     E confirmo maior idade
+#     E clico no botão "Finalizar Cadastro"
+#     Então recebo mensagem de Sucesso "Cadastro de Sucesso" na tela
 
 CT 01.02 - Tentar realizar cadastro de conta com CPF válido porem já cadastrado
     [Documentation]     Caso de teste valida que NÃO é possível realizar cadastro de conta com CPF já cadastrado

@@ -1,6 +1,5 @@
 *** Settings ***
 Resource           ../Resources/Main.robot
-Resource           ../Resources/Keywords/07-Rodapé.robot
 Test Setup         Dado que acesse o Boomg
 Test Teardown      Fechar navegador
 Documentation      Modúlo de Rodapé do usuário no sistema Boomg
@@ -34,7 +33,7 @@ CT 07.05 - Validar o botão Jogo Consciente
     [Documentation]     Teste valida o botão Jogo Consciente
     [Tags]    Rodapé    Funcional        
     Dado que clico no botão Jogo Consciente
-    Então entro na página Jogo Consciente
+    Então entro na página Jogo Consciente (Rodapé)
 
 CT 07.06 - Validar o botão Jogo Promoções
     [Documentation]     Teste valida o botão Jogo Promoções
@@ -45,11 +44,11 @@ CT 07.06 - Validar o botão Jogo Promoções
 CT 07.07 - Validar o botão pix de Métodos de pagamento do rodapé
     [Documentation]     Teste valida o botão Jogo Consciente
     [Tags]    Rodapé    Funcional        
-    Dado que clico no botão pix de Métodos de pagamento do rodapé
-    Quando preencho Email real (Lgn)
-    E preencho Senha válida (Lgn)
-    E clico no botão "Entrar em Conta" (Lgn)
-    Dado que clico no botão pix de Métodos de pagamento do rodapé
+    Dado que clico no botão "Entrar" (Rodapé)
+    Quando preencho Email real (Rodapé)
+    E preencho Senha válida (Rodapé)
+    E clico no botão "Entrar em Conta" (Rodapé)
+    E que clico no botão pix de Métodos de pagamento do rodapé
     Então entro na página depositar da minha conta
 
 CT 07.08 - Validar o botão Como Apostar
@@ -76,7 +75,7 @@ CT 07.11 - Validar o botão Regras e Procedimentos
     Dado que clico no botão Regras e Procedimentos
     Então entro na página Regras e Procedimentos
 
-CT 07.12 - Validar o botão GAMING CURACAO
+CT 07.12 - Validar o botão GAMING CURACAO (RUIM)
     [Documentation]     Teste valida o botão Regras e Procedimentos
     [Tags]    Rodapé    Funcional        
     Dado que clico no botão GAMING CURACAO

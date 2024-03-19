@@ -78,6 +78,7 @@ Quando preencho CPF de menor
 
 Então recebo mensagem de erro "Você precisa ter mais de 18 anos" na tela
     Press Key                       ${CampoCPF}    \\09
+    Sleep    7s
     Wait Until Element Is Visible    //span[contains(.,'Você precisa ter mais de 18 anos')]
     Capture Page Screenshot    CT1.5.png
 
@@ -168,7 +169,7 @@ E clico no link "Termos e Condições"
     Click Element                     locator=(//span[contains(.,'Termos e Condições')])[2]
 
 Então valido tela de "Termos e Condições"
-    Wait Until Element Is Visible     locator=//span[@itemprop='name'][contains(.,'Termos e Condições')]
+    Wait Until Element Is Visible     locator=//span[contains(.,'10.1 Se uma regra específica do esporte contradizer uma regra geral, a regra geral não será aplicada.')]
     Capture Page Screenshot    CT1.14.png
 
 # -- 1.15

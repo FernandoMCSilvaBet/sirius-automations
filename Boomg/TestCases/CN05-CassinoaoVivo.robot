@@ -1,7 +1,6 @@
 *** Settings ***
 Resource           ../Resources/Main.robot
-Resource           ../Resources/Keywords/05-CassinoaoVivo.robot
-Test Setup         Dado que acesse o Boomg
+Test Setup         Dado que acesse o Boomg e logue no sistema
 Test Teardown      Fechar navegador
 Documentation      Modúlo de Cassino ao Vivo do usuário no sistema Boomg
 
@@ -252,3 +251,30 @@ CT 05.35 - Validar o botão "Popularidade" dos Jogos Ao Vivo do Menu CASSINO AO 
     Quando clico no botão Ao Vivo central        
     E clico no botão "Popularidade" dos Jogos Ao Vivo do Menu CASSINO AO VIVO 
     Então entro na página "Popularidade" dos Jogos Ao Vivo do Menu CASSINO AO VIVO
+
+CT 05.36 - Validar o jogo "American Roulette - Evolution" do Menu CASSINO AO VIVO
+    [Documentation]     Teste valida o o jogo "American Roulette - Evolution" do Menu CASSINO AO VIVO
+    [Tags]    Cassino ao Vivo    Funcional
+    Dado que acesso o Menu CASSINO AO VIVO
+    Quando clico no botão "Ao Vivo" central        
+    E clico no botão "American Roulette - Evolution"
+    E clico no botão "jogar" do jogo "American Roulette - Evolution"
+    Então jogo "American Roulette - Evolution"
+
+CT 05.37 - Validar a não possibilidade de jogar o jogo "American Roulette - Evolution" do Menu CASSINO AO VIVO por falta de login
+    [Documentation]     Teste valida a não possibilidade de jogar o jogo "American Roulette - Evolution" do Menu CASSINO AO VIVO por falta de login
+    [Tags]    Cassino ao Vivo    Funcional
+    Dado que acesso o Menu CASSINO AO VIVO
+    Quando clico no botão "Ao Vivo" central        
+    E clico no botão "American Roulette - Evolution"
+    E clico no botão "jogar" do jogo "American Roulette - Evolution" não logado
+    Então não jogo "American Roulette - Evolution" dos Jogos Ao Vivo do Menu CASSINO AO VIVO por falta de login
+
+CT 05.38 - Validar a não possibilidade de jogar o jogo "American Roulette - Evolution" do Menu CASSINO AO VIVO sem saldo
+    [Documentation]     Teste valida a não possibilidade de jogar o jogo "American Roulette - Evolution" do Menu CASSINO AO VIVO por falta de saldo
+    [Tags]    Cassino ao Vivo    Funcional
+    Dado que acesso o Menu CASSINO AO VIVO
+    Quando clico no botão "Ao Vivo" central        
+    E clico no botão "American Roulette - Evolution"
+    E clico no botão "jogar" do jogo "American Roulette - Evolution" sem saldo
+    Então não jogo o "American Roulette - Evolution" por falta de saldo

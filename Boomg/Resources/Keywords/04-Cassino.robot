@@ -9,7 +9,7 @@ Dado que clico no menu CASSINO
     Click Element                    (//span[@class='default-header__section-label'][contains(.,'Cassino')])[1]
 
 Então entro no menu CASSINO
-    Wait Until Element Is Visible   //div[@class='category-resume__title-text'][contains(.,'Originais')]
+    Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Originais')]
 
 # --4.2
 Quando clico no botão Originais superior
@@ -42,7 +42,6 @@ Quando clico no botão Instantâneas superior
 
 Então entro na página Instantâneas superior
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Instantâneas')]
-
 
 # --4.6
 Quando clico no botão Populares superior
@@ -144,16 +143,30 @@ Quando clico no botão Ano Novo superior
 Então entro na página Ano Novo superior
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Ano Novo')]
 
-# --4.20
+#--4.20
+Quando clico no botão Teste Posicao superior
+    Wait Until Element Is Visible    //div[@class='we-nav-section-title'][contains(.,'Teste Posicao')]
+    Click Element                    //div[@class='we-nav-section-title'][contains(.,'Teste Posicao')]
+Então entro na página Teste Posicao superior
+    Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Teste Posicao')]
+
+#--4.21
+Quando clico no botão Mais Jogados superior
+    Wait Until Element Is Visible    //div[@class='we-nav-section-title'][contains(.,'Mais Jogados')]
+    Click Element                    //div[@class='we-nav-section-title'][contains(.,'Mais Jogados')]
+Então entro na página Mais Jogados superior
+    Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Mais Jogados')]
+
+# --4.22
 Quando clico sem estar logado no botão "Fortune Tiger" dos jogos Cassino do Menu CASSINO
-    Click Element                    (//img[@src='https://assets.boomg.com/2/desktopImage-Fortune Tiger-1694616531666.jpg'])[1]
-    Wait Until Element Is Visible    //span[@itemprop='name'][contains(.,'Fortune Tiger')]
-    Click Element                    //span[contains(.,'Jogar')]
+    Click Element                    //img[contains(@alt,'Fortune Tiger')]
+    Wait Until Element Is Visible    //button[@type='button'][contains(.,'Jogar')]
+    Click Element                    //button[@type='button'][contains(.,'Jogar')]
 
 Então não entro na página do jogo "Fortune Tiger" do Menu CASSINO
-    Wait Until Element Is Visible    //button[@type='submit'][contains(.,'Entrar na Conta')]
+    Wait Until Element Is Visible    //span[contains(.,'Entrar na Conta')]
 
-# --4.21
+# --4.23
 Quando clico para jogar o jogo "Cash Patrol" do Menu CASSINO
     Click Element                    //img[contains(@alt,'Cash Patrol')]
     Wait Until Element Is Visible    //span[@itemprop='name'][contains(.,'Cash Patrol')]
@@ -167,7 +180,7 @@ Então não jogo o jogo "Cash Patrol" por não ter saldo
     Wait Until Element Is Visible    //div[@class='game-frame-bar__title'][contains(.,'Cash Patrol')]
     Click Element                    //button[@type='submit'][contains(.,'Entrar na Conta')]
 
-# --4.22
+# --4.24
 Quando clico para jogar no jogo "Fortune Tiger" do Menu CASSINO
     Click Element                    (//img[@src='https://assets.boomg.com/2/desktopImage-Fortune Tiger-1694616531666.jpg'])[1]
     Wait Until Element Is Visible    //button[@type='button'][contains(.,'Jogar')]
@@ -175,17 +188,17 @@ Quando clico para jogar no jogo "Fortune Tiger" do Menu CASSINO
     Wait Until Element Is Visible    //button[@type='submit'][contains(.,'Entrar na Conta')]
     Click Element                    //button[@type='submit'][contains(.,'Entrar na Conta')]
 
-Quando preencho Email real (Lgn)
+Quando preencho Email real (Cassino)
     Input Text                      locator=//input[contains(@name,'usuario')]      text=${EmailCadastrado}
 
-E preencho Senha válida (Lgn)
+E preencho Senha válida (Cassino)
     Input Text                      locator=//input[contains(@name,'senha')]        text=${SenhaCadastrada}
 
-E clico no botão "Entrar em Conta" (Lgn)
+E clico no botão "Entrar em Conta" (Cassino)
     Click Element                    //button[@type='submit'][contains(.,'Entrar na Conta')]
     # Wait Until Element Is Visible    //a[contains(@class,'user-header-menu__button-profile')]
 
-Então recebo mensagem de Sucesso "Login realizado com sucesso" na tela (Lgn)
+Então recebo mensagem de Sucesso "Login realizado com sucesso" na tela (Cassino)
     Wait Until Element Is Visible    //div[@class='notyf__message'][contains(.,'Login realizado com sucesso')]
     Capture Page Screenshot
 
@@ -195,7 +208,7 @@ Então recebo mensagem de Sucesso "Login realizado com sucesso" na tela (Lgn)
 Então jogo o jogo "Fortune Tiger"
     Wait Until Element Is Visible    //div[contains(@class,'cover')]
 
-# --4.23
+# --4.25
 E seleciono jogos Populares 
     Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Populares')]
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Populares')]
@@ -211,101 +224,94 @@ Quando clico para jogar o jogo "Aviator" do Menu CASSINO
 E preencho Email real (Cassino)
     Input Text                      locator=${CampoUsuario}      text=${EmailCadastrado}
 
-E preencho Senha válida (Cassino)
-    Input Text                      locator=${CampoSenha}        text=${SenhaCadastrada}
-
-E clico no botão "Entrar em Conta" (Cassino)
-    Click Element                    //button[@type='submit'][contains(.,'Entrar na Conta')]
-
 Então jogo o jogo "Aviator"
     Wait Until Element Is Visible    //div[@class='game-frame-bar__title'][contains(.,'Aviator')]
 
-
-# --4.25
+# --4.26
 Quando clico no botão Originais lateral
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Originais')]
     Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Originais')]
 Então entro na página Originais
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Originais')]
 
-# --4.26
+# --4.27
 Quando clico no botão Crash Games lateral
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Crash Games')]
     Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Crash Games')]
 Então entro na página Crash Games
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Crash Games')]
 
-# --4.27
+# --4.28
 Quando clico no botão Cassino lateral
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Cassino')]
     Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Cassino')]
 Então entro na página Cassino
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Cassino')]
 
-# --4.28
+# --4.29
 Quando clico no botão Instantâneas lateral
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Instantâneas')]
     Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Instantâneas')]
 Então entro na página Instantâneas
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Instantâneas')]
 
-# --4.29
+# --4.30
 Quando clico no botão Populares lateral
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Populares')]
     Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Populares')]
 Então entro na página Populares
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Populares')]
 
-# --4.30
+# --4.31
 Quando clico no botão Natal lateral
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Natal')]
     Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Natal')]
 Então entro na página Natal
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Natal')]
 
-# --4.31
+# --4.32
 Quando clico no botão Novos lateral
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Novos')]
     Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Novos')]
 Então entro na página Novos
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Novos')]
 
-# --4.32
+# --4.33
 Quando clico no botão Drops & Wins lateral
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Drops & Wins')]
     Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Drops & Wins')]
 Então entro na página Drops & Wins
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Drops & Wins')]
 
-# --4.33
+# --4.34
 Quando clico no botão Multi Linhas lateral
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Multi Linhas')]
     Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Multi Linhas')]
 Então entro na página Multi Linhas
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Multi Linhas')]
 
-# --4.34
+# --4.35
 Quando clico no botão Compra de Bônus lateral
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Compra de Bônus')]
     Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Compra de Bônus')]
 Então entro na página Compra de Bônus
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Compra de Bônus')]
 
-# --4.35
+# --4.36
 Quando clico no botão Épicos lateral
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Épicos')]
     Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Épicos')]
 Então entro na página Épicos
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Épicos')]
 
-# --4.36
+# --4.37
 Quando clico no botão Acumulados lateral
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Acumulados')]
     Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Acumulados')]
 Então entro na página Acumulados
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Acumulados')]
 
-# --4.37
+# --4.38
 Quando clico no botão Animais lateral
     Execute Javascript              window.scrollTo(0, document.body.scrollHeight);
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Animais')]
@@ -313,7 +319,7 @@ Quando clico no botão Animais lateral
 Então entro na página Animais
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Animais')]
 
-# --4.38
+# --4.39
 Quando clico no botão Temáticos lateral
     Execute Javascript              window.scrollTo(0, document.body.scrollHeight);
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Temáticos')]
@@ -321,7 +327,7 @@ Quando clico no botão Temáticos lateral
 Então entro na página Temáticos
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Temáticos')]
 
-# --4.39
+# --4.40
 Quando clico no botão Esportivos lateral
     Execute Javascript              window.scrollTo(0, document.body.scrollHeight);
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Esportivos')]
@@ -329,7 +335,7 @@ Quando clico no botão Esportivos lateral
 Então entro na página Esportivos
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Esportivos')]
 
-# --4.40
+# --4.41
 Quando clico no botão Vídeo Bingo lateral
     Execute Javascript              window.scrollTo(0, document.body.scrollHeight);
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Vídeo Bingo')]
@@ -337,7 +343,7 @@ Quando clico no botão Vídeo Bingo lateral
 Então entro na página Vídeo Bingo
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Vídeo Bingo')]
 
-# --4.41
+# --4.42
 Quando clico no botão Vídeo Poker lateral
     Execute Javascript              window.scrollTo(0, document.body.scrollHeight);
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Vídeo Poker')]
@@ -345,7 +351,7 @@ Quando clico no botão Vídeo Poker lateral
 Então entro na página Vídeo Poker
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Vídeo Poker')]
 
-# --4.42
+# --4.43
 Quando clico no botão Ano Novo lateral
     Execute Javascript              window.scrollTo(0, document.body.scrollHeight);
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Ano Novo')]
@@ -353,19 +359,36 @@ Quando clico no botão Ano Novo lateral
 Então entro na página Ano Novo
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Ano Novo')]
 
-# --4.43
-Quando clico no botão Atendimento lateral
+# --4.44
+Quando clico no botão Teste Posicao lateral
     Execute Javascript              window.scrollTo(0, document.body.scrollHeight);
-    Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Atendimento')]
-    Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Atendimento')]
-Então entro na página Atendimento
+    Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Teste Posicao')]
+    Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Teste Posicao')]
+Então entro na página Teste Posicao
+    Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Teste Posicao')]
+
+# --4.45
+Quando clico no botão Mais Jogados lateral
+    Execute Javascript              window.scrollTo(0, document.body.scrollHeight);
+    Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Mais Jogados')]
+    Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Mais Jogados')]
+Então entro na página Mais Jogados
+    Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Mais Jogados')]
+
+# --4.46
+Quando clico no botão Suporte lateral
+    Execute Javascript              window.scrollTo(0, document.body.scrollHeight);
+
+    Wait Until Element Is Visible    (//span[contains(@class,'sidebar_nav__item-title')])[21]
+    Click Element                    (//span[contains(@class,'sidebar_nav__item-title')])[21]
+Então entro na página Suporte lateral
     # O comando abaixo serve para alterar a aba que estamos testando
     ${handles_before}   Get Window Handles
     Switch Window       ${handles_before}[1]
     Sleep    10s
-    Wait Until Element Is Visible    //img[contains(@class,'lt-topbar__logo lt-flex-shrink-0')]
+    Wait Until Element Is Visible    (//div[contains(.,'Como posso ajudá-lo?')])[5]
 
-# --4.44
+# --4.47
 Quando clico no botão Jogo Consciente lateral
     Execute Javascript              window.scrollTo(0, document.body.scrollHeight);
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Jogo Consciente')]
@@ -373,32 +396,14 @@ Quando clico no botão Jogo Consciente lateral
 Então entro na página Jogo Consciente
     Wait Until Element Is Visible    //h1[contains(.,'Jogo Consciente')]
 
-# --4.45
-Quando clico no botão Dia lateral
-    Execute Javascript              window.scrollTo(0, document.body.scrollHeight);
-    Click Element                   //label[contains(@for,'toggle-shadow-5187')]
-                    
-
-Então entro em Dia
-    Wait Until Element Is Visible    //label[contains(@for,'toggle-shadow-9092')]
-
-# --4.46
-Quando clico no botão Noite lateral
-    Execute Javascript              window.scrollTo(0, document.body.scrollHeight);
-    # Wait Until Element Is Visible    //span[@class='default-header__section-icon icon-cassino']
-    # Wait Until Element Is Visible    //label[contains(@for,'toggle-shadow-7221')]
-    # Click Element                    //label[contains(@for,'toggle-shadow-9092')]
-Então entro em Noite
-    Wait Until Element Is Visible    //label[contains(@for,'toggle-shadow-9092')]
-
-# --4.46
+# --4.48
 Quando clico no botão Originais central
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Originais')]
     Click Element                    //div[@class='category-resume__title-text'][contains(.,'Originais')]
 Então entro na página Originais central
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Originais')]
 
-# --4.47
+# --4.49
 Quando clico no botão Crash Games central
     Wait Until Element Is Visible     //div[@class='category-resume__title-text'][contains(.,'Crash Games')]
     Execute JavaScript               document.evaluate("//div[@class='category-resume__title-text'][contains(.,'Crash Games')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
@@ -406,7 +411,7 @@ Quando clico no botão Crash Games central
 Então entro na página Crash Games central
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Crash Games')]
 
-# --4.48
+# --4.50
 Quando clico no botão Cassino central
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Cassino')]
     Scroll Element Into View         //div[@class='category-resume__title-text'][contains(.,'Cassino')]
@@ -415,7 +420,7 @@ Quando clico no botão Cassino central
 Então entro na página Cassino central
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Cassino')]
 
-# --4.49
+# --4.51
 Quando clico no botão Instantâneas central
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Instantâneas')]
     Scroll Element Into View         //div[@class='category-resume__title-text'][contains(.,'Instantâneas')]
@@ -424,7 +429,7 @@ Quando clico no botão Instantâneas central
 Então entro na página Instantâneas central
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Instantâneas')]
 
-# --4.50
+# --4.52
 Quando clico no botão Populares central
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Populares')]
     Scroll Element Into View         //div[@class='category-resume__title-text'][contains(.,'Populares')]
@@ -433,7 +438,7 @@ Quando clico no botão Populares central
 Então entro na página Populares central
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Populares')]
 
-# --4.51
+# --4.53
 Quando clico no botão Natal central
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Natal')]
     Scroll Element Into View         //div[@class='category-resume__title-text'][contains(.,'Natal')]
@@ -442,7 +447,7 @@ Quando clico no botão Natal central
 Então entro na página Natal central
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Natal')]
 
-# --4.52
+# --4.54
 Quando clico no botão Novos central
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Novos')]
     Scroll Element Into View         //div[@class='category-resume__title-text'][contains(.,'Novos')]
@@ -451,7 +456,7 @@ Quando clico no botão Novos central
 Então entro na página Novos central
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Novos')]
 
-# --4.53
+# --4.55
 Quando clico no botão Drops & Wins central
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Drops & Wins')]
     Scroll Element Into View         //div[@class='category-resume__title-text'][contains(.,'Drops & Wins')]
@@ -460,7 +465,7 @@ Quando clico no botão Drops & Wins central
 Então entro na página Drops & Wins central
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Drops & Wins')]
 
-# --4.54
+# --4.56
 Quando clico no botão Multi Linhas central
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Multi Linhas')]
     Scroll Element Into View         //div[@class='category-resume__title-text'][contains(.,'Multi Linhas')]
@@ -469,7 +474,7 @@ Quando clico no botão Multi Linhas central
 Então entro na página Multi Linhas central
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Multi Linhas')]
 
-# --4.55
+# --4.57
 Quando clico no botão Compra de Bônus central
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Compra de Bônus')]
     Scroll Element Into View         //div[@class='category-resume__title-text'][contains(.,'Compra de Bônus')]
@@ -478,7 +483,7 @@ Quando clico no botão Compra de Bônus central
 Então entro na página Compra de Bônus central
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Compra de Bônus')]
 
-## --4.56
+## --4.58
 Quando clico no botão Épicos central
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Épicos')]
     Scroll Element Into View         //div[@class='category-resume__title-text'][contains(.,'Épicos')]
@@ -487,7 +492,7 @@ Quando clico no botão Épicos central
 Então entro na página Épicos central
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Épicos')]
 
-# --4.57
+# --4.59
 Quando clico no botão Acumulados central
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Acumulados')]
     Scroll Element Into View         //div[@class='category-resume__title-text'][contains(.,'Acumulados')]
@@ -496,7 +501,7 @@ Quando clico no botão Acumulados central
 Então entro na página Acumulados central
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Acumulados')]
 
-# --4.58
+# --4.60
 Quando clico no botão Animais central
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Animais')]
     Scroll Element Into View         //div[@class='category-resume__title-text'][contains(.,'Animais')]
@@ -505,7 +510,7 @@ Quando clico no botão Animais central
 Então entro na página Animais central
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Animais')]
 
-# --4.59
+# --4.61
 Quando clico no botão Temáticos central
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Temáticos')]
     Scroll Element Into View         //div[@class='category-resume__title-text'][contains(.,'Temáticos')]
@@ -514,7 +519,7 @@ Quando clico no botão Temáticos central
 Então entro na página Temáticos central
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Temáticos')]
 
-# --4.60
+# --4.62
 Quando clico no botão Esportivos central
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Esportivos')]
     Scroll Element Into View         //div[@class='category-resume__title-text'][contains(.,'Esportivos')]
@@ -523,7 +528,7 @@ Quando clico no botão Esportivos central
 Então entro na página Esportivos central
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Esportivos')]
 
-# --4.61
+# --4.63
 Quando clico no botão Vídeo Bingo central
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Vídeo Bingo')]
     Scroll Element Into View         //div[@class='category-resume__title-text'][contains(.,'Vídeo Bingo')]
@@ -532,7 +537,7 @@ Quando clico no botão Vídeo Bingo central
 Então entro na página Vídeo Bingo central
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Vídeo Bingo')]
 
-# --4.62
+# --4.64
 Quando clico no botão Vídeo Poker central
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Vídeo Poker')]
     Scroll Element Into View         //div[@class='category-resume__title-text'][contains(.,'Vídeo Poker')]
@@ -541,7 +546,7 @@ Quando clico no botão Vídeo Poker central
 Então entro na página Vídeo Poker central
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Vídeo Poker')]
 
-# --4.63
+# --4.65
 Quando clico no botão Ano Novo central
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Ano Novo')]
     Scroll Element Into View         //div[@class='category-resume__title-text'][contains(.,'Ano Novo')]
@@ -550,7 +555,25 @@ Quando clico no botão Ano Novo central
 Então entro na página Ano Novo central
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Ano Novo')]
 
-# --4.64
+# --4.66
+Quando clico no botão Teste Posicao central
+    Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Teste Posicao')]
+    Scroll Element Into View         //div[@class='category-resume__title-text'][contains(.,'Teste Posicao')]
+    Execute JavaScript               document.evaluate("//div[@class='category-resume__title-text'][contains(.,'Teste Posicao')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
+
+Então entro na página Teste Posicao central
+    Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Teste Posicao')]
+
+# --4.67
+Quando clico no botão Mais Jogados central
+    Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Mais Jogados')]
+    Scroll Element Into View         //div[@class='category-resume__title-text'][contains(.,'Mais Jogados')]
+    Execute JavaScript               document.evaluate("//div[@class='category-resume__title-text'][contains(.,'Mais Jogados')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
+
+Então entro na página Mais Jogados central
+    Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Mais Jogados')]
+
+# --4.68
 Quando clico no botão "955 jogos" dos Jogos Cassino do Menu CASSINO
     Scroll Element Into View         //span[contains(.,'955 jogos')]
     Execute JavaScript               document.evaluate("//div[@class='category-resume__title-text'][contains(.,'Cassino')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
@@ -558,7 +581,7 @@ Quando clico no botão "955 jogos" dos Jogos Cassino do Menu CASSINO
 Então entro na página dos Jogos Cassino do Menu CASSINO
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Cassino')]
 
-# --4.65
+# --4.69
 Quando clico no botão Categorias dos Jogos Originais do Menu CASSINO
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Originais')]
     Click Element                    //div[@class='category-resume__title-text'][contains(.,'Originais')]
@@ -568,7 +591,7 @@ Quando clico no botão Categorias dos Jogos Originais do Menu CASSINO
 Então abro as Categorias dos Jogos do Menu CASSINO
     Wait Until Element Is Visible    //div[@class='game-category-filters__item-drop'][contains(.,'OriginaisCrash GamesCassinoInstantâneasPopularesNatalNovosDrops & WinsMulti LinhasCompra de BônusÉpicosAcumuladosAnimaisTemáticosEsportivosVídeo BingoVídeo PokerAno Novo')]
 
-# --4.66
+# --4.70
 Quando clico no botão 'A/Z' dos Jogos Originais do Menu CASSINO
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Originais')]
     Click Element                    //div[@class='category-resume__title-text'][contains(.,'Originais')]
@@ -578,7 +601,7 @@ Quando clico no botão 'A/Z' dos Jogos Originais do Menu CASSINO
 Então abro a página de jogos 'A/Z' do Menu CASSINO
     Wait Until Element Is Visible    //img[contains(@alt,'Blackjack')]
 
-# --4.67
+# --4.71
 Quando clico no botão 'Popularidade' dos Jogos Originais do Menu CASSINO
     Wait Until Element Is Visible    //div[@class='category-resume__title-text'][contains(.,'Originais')]
     Click Element                    //div[@class='category-resume__title-text'][contains(.,'Originais')]

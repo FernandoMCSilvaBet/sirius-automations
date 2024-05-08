@@ -1,6 +1,10 @@
 *** Variable ***
-${URLHML}                https://staging.boomg.com/
-${BROWSER}               chrome
+${URLHML}                   https://homolog.boomg.com/
+# ...    https://homolog.boomg.com/
+# ...    https://staging.boomg.com/
+# ...    https://www.boomg.com/
+
+${BROWSER}                  chrome
 
 # Cadastro e Login
 ${CPFCadastrado}            10561665761
@@ -31,9 +35,21 @@ ${CódigoVencido}
 ${CampoCPF}                            //input[contains(@name,'cpf')]
 ${CampoEmail}                          //input[contains(@name,'email')]
 ${CampoTelefone}                       //input[contains(@name,'telefone')]
-${BotaoAvancar}                        //button[@type='button'][contains(.,'Avançar')]
+${BotaoAvancar}                        //button[@type='button'][contains(.,'Continuar')]                                  
 
 # Login
 ${CampoUsuario}                        //input[contains(@name,'usuario')]
 ${CampoSenha}                          //input[contains(@name,'senha')]
 ${CampoEmailLogin}                     //input[contains(@name,'e-mail*')]
+
+${BOTAO_CASSINO}                        (//span[contains(.,'Cassino')])[1]
+${BOTAO_CASSINOAOVIVO}                  (//span[contains(@class,'default-header__section-label')])[2]
+${BOTAO_ESPORTES}                       //span[@class='default-header__section-label'][contains(.,'Esportes')]
+${BOTAO_PESQUISAR}                      //span[@class='icon']
+${BOTAO_SUPORTE}                        //span[@class='default-header__button-menu__label-desktop'][contains(.,'Suporte')]
+${BOTAO_PROMOCOES}                      (//div[contains(.,'Promoções')])[7]
+${BOTAO_ENTRAR}                         //button[@class='user-header-menu__button-login'][contains(.,'Entrar')]                      
+${BOTAO_CADASTRAR}                      //span[contains(.,'Cadastrar')]
+${BOTAO_BOOMG}                          //a[contains(@class,'default-header__logo')]
+
+${SCROLL_BAIXO}                         window.scrollTo(0, document.body.scrollHeight);

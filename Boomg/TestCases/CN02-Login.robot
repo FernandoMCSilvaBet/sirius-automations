@@ -153,7 +153,7 @@ CT 02.15 - Validar função Reenviar Código
     E clico no botão "Reenviar código" (Lgn)
     Então recebo mensagem "Código reenviado" na tela (Lgn)
 
-CT 02.16 - Tentar Recuperar Senha com Código vencido
+CT 02.16 - Tentar Recuperar Senha com Código vencido (ERRO)
     [Documentation]     Caso de teste valida que não é possível recuperar senha com código vencido
     [Tags]    Login    RecuperarSenha    Exceção        
     Dado que clico no botão "Entrar" (Lgn)

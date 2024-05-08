@@ -9,7 +9,7 @@ Dado que clico no Menu ESPORTES
     Click Element                    //span[@class='default-header__section-label'][contains(.,'Esportes')]
 
 Então entro no Menu ESPORTES
-    Wait Until Element Is Visible    //div[@class='we-nav-section-title'][contains(.,'Futebol')]
+    Wait Until Element Is Visible    //h2[@class='h2'][contains(.,'Destaques ao vivo')]
 
 
 # --6.2
@@ -265,7 +265,7 @@ Então entro na página Futsal lateral
 
 # --6.29
 Quando clico no botão Basquete lateral
-    Execute Javascript              window.scrollTo(0, document.body.scrollHeight); 
+    # Execute Javascript              window.scrollTo(0, document.body.scrollHeight); 
     Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Basquete')]
     Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Basquete')]
 

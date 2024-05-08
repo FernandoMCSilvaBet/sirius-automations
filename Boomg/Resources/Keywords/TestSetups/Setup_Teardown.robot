@@ -18,7 +18,7 @@ Dado que acesse o Boomg e logue no sistema
     Wait Until Element Is Visible    //input[contains(@name,'usuario')]
     Input Text                      locator=//input[contains(@name,'usuario')]      text=${EmailCadastrado}
     Input Text                      locator=//input[contains(@name,'senha')]        text=${SenhaCadastrada}
-    Click Element                    //button[@type='submit'][contains(.,'Entrar na Conta')]
+    Click Element                    //button[@type='submit'][contains(.,'Entrar')]
     Wait Until Element Is Visible    //div[@class='notyf__message'][contains(.,'Login realizado com sucesso')]
 
 Fechar navegador

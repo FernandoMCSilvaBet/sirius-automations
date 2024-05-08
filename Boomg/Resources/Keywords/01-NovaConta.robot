@@ -4,9 +4,9 @@ Resource           ../Main.robot
 
 *** Variable ***
 # Para rodar o primeiro cenário, é necessário atualizar os 3 primeiras variáveis
-${CPFReal}                  78681391291
-${EmailReal}                teste@teste6.com.br
-${TelefoneReal}             21965545344
+${CPFReal}                  02988585253
+${EmailReal}                teste@teste7.com.br
+${TelefoneReal}             21965545544
 
 *** Keywords ***
 
@@ -28,8 +28,8 @@ Então recebo mensagem de Sucesso "Cadastro de Sucesso" na tela
 
 # -- 1.2
 Dado que clico no botão "Cadastrar"
-     Wait Until Element Is Visible   //button[@type='button'][contains(.,'Cadastrar')]
-     Click Element                   //button[@type='button'][contains(.,'Cadastrar')]
+     Wait Until Element Is Visible   ${BOTAO_CADASTRAR}
+     Click Element                   ${BOTAO_CADASTRAR}
      Wait Until Element Is Visible   (//div[contains(.,'Criar Conta')])[6]
 
 Quando preencho CPF já cadastrado
@@ -45,10 +45,10 @@ Quando preencho CPF válido
     Input Text                      locator=${CampoCPF}     text=${CPFNovo}
     Press Key                       ${CampoCPF}    \\09
 
-E clico no botão Passo 2 New                   
+E clico no botão Continuar New                   
     Click Element                     ${BotaoAvancar}
 
-E clico no botão Passo 2                   
+E clico no botão Continuar                   
     Click Element                     ${BotaoAvancar}
     Sleep    5s
     Click Element                     ${BotaoAvancar}
@@ -177,5 +177,19 @@ Quando clico no link "Login aqui"
     Click Element                     locator=//a[contains(.,'login!')]
 
 Então valido tela de "Login"
-    Wait Until Element Is Visible     //div[@class='modal-box__content'][contains(.,'Bem-vindo de volta!E-mail, Celular ou CPF*Senha*Lembrar loginEsqueceu a senha?Entrar na ContaNão possui a conta? Cadastre-se agora!')]
+    Wait Until Element Is Visible     //div[@class='modal-box__title'][contains(.,'Login')]
     Capture Page Screenshot    CT1.15.png
+
+# -- 1.16
+E clico em fechar
+    Click Element                     locator=//i[contains(@class,'fas fa-times-circle')]
+    Wait Until Element Is Visible     //p[@class='text'][contains(.,'Tem certeza de que você quer desistir de cadastrar sua conta?')]
+
+E clico em "Continuar com o cadastro"
+    Click Element                     locator=//span[contains(.,'Continuar com o cadastro')]
+    Wait Until Element Is Visible     //div[@class='we-checkbox-label'][contains(.,'Aceito receber novidades e ofertas por SMS')]
+
+Então clico em "Desistir do cadastro"
+    Capture Page Screenshot    CT1.16.png
+    Click Element                     locator=//p[@class='content-link'][contains(.,'Desistir do cadastro')]
+

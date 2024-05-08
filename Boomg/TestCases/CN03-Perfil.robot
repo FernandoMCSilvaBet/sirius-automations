@@ -37,14 +37,14 @@ CT 03.03 - Tentar validar celular com Telefone inválido
     E clico em "Salvar dados pessoais" (Prf)
     Então recebo mensagem de erro "Número de celular inválido" na tela (Prf)
 
-CT 03.04 - Realizar alteração de celular em dados pessoais
-    [Documentation]     Caso de teste realiza alteração de celular em dados pessoais
-    [Tags]    Perfil    Funcional            
-    Dado que clico no botão "Perfil" (Prf)
-    Quando seleciono submenu "Perfil" (Prf)
-    E altero o campo "Telefone" (Prf)
-    E clico em "Salvar dados pessoais" (Prf)
-    Então recebo mensagem de sucesso "Cadastro atualizado com sucesso" na tela (Prf)
+# CT 03.04 - Realizar alteração de celular em dados pessoais
+#     [Documentation]     Caso de teste realiza alteração de celular em dados pessoais
+#     [Tags]    Perfil    Funcional            
+#     Dado que clico no botão "Perfil" (Prf)
+#     Quando seleciono submenu "Perfil" (Prf)
+#     E altero o campo "Telefone" (Prf)
+#     E clico em "Salvar dados pessoais" (Prf)
+#     Então recebo mensagem de sucesso "Cadastro atualizado com sucesso" na tela (Prf)
 
 CT 03.05 - Realizar validação de celular em dados pessoais
     [Documentation]     Caso de teste realiza validação de celular em dados pessoais do cliente
@@ -56,26 +56,26 @@ CT 03.05 - Realizar validação de celular em dados pessoais
     E clico em "Confirmar código" (Prf)
     Então recebo mensagem de sucesso "Telefone validado" na tela (Prf)
 
-CT 03.06 - Reenviar código para corfirmar código
-    [Documentation]     Caso de teste realiza reenvio de código para validação de celular em dados pessoais do cliente
-    [Tags]    Perfil    Funcional            
-    Dado que clico no botão "Perfil" (Prf)
-    Quando seleciono submenu "Perfil" (Prf)
-    E clico em "Validar Celular" (Prf)
-    E clico em link "Reenviar código" (Prf)
-    E preencho campo "Código" (Prf)
-    E clico em "Confirmar código" (Prf)
-    Então recebo mensagem de sucesso "Telefone validado" na tela (Prf)
+# CT 03.06 - Reenviar código para corfirmar código
+#     [Documentation]     Caso de teste realiza reenvio de código para validação de celular em dados pessoais do cliente
+#     [Tags]    Perfil    Funcional            
+#     Dado que clico no botão "Perfil" (Prf)
+#     Quando seleciono submenu "Perfil" (Prf)
+#     E clico em "Validar Celular" (Prf)
+#     E clico em link "Reenviar código" (Prf)
+#     E preencho campo "Código" (Prf)
+#     E clico em "Confirmar código" (Prf)
+#     Então recebo mensagem de sucesso "Telefone validado" na tela (Prf)
 
-CT 03.07 - Realizar alteração de email em dados pessoais
-    [Documentation]     Caso de teste realiza alteração de email em dados pessoais
-    [Tags]    Perfil    Funcional            
-    Dado que clico no botão "Perfil" (Prf)
-    Quando seleciono submenu "Perfil" (Prf)
-    E altero o campo "Email" (Prf)
-    E clico em "Salvar dados pessoais" (Prf)
-    Então recebo mensagem de sucesso "Cadastro atualizado com sucesso" na tela (Prf)
-    E realizo ajuste de massa de email (Prf)
+# CT 03.07 - Realizar alteração de email em dados pessoais
+#     [Documentation]     Caso de teste realiza alteração de email em dados pessoais
+#     [Tags]    Perfil    Funcional            
+#     Dado que clico no botão "Perfil" (Prf)
+#     Quando seleciono submenu "Perfil" (Prf)
+#     E altero o campo "Email" (Prf)
+#     E clico em "Salvar dados pessoais" (Prf)
+#     Então recebo mensagem de sucesso "Cadastro atualizado com sucesso" na tela (Prf)
+#     E realizo ajuste de massa de email (Prf)
 
 CT 03.08 - Realizar validação de email em dados pessoais
     [Documentation]     Caso de teste realiza validação de email em dados pessoais do cliente

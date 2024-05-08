@@ -17,11 +17,11 @@ CT 07.02 - Validar o botão Instagram
     Dado que clico no logo do Instagram
     Então entro na página do Boomg Brasil no Instagram
 
-CT 07.03 - Validar o botão twitter
-    [Documentation]     Teste valida o link para a página do Boomg Brasil na rede social twitter
+CT 07.03 - Validar o botão Twitter
+    [Documentation]     Teste valida o link para a página do Boomg Brasil na rede social Twitter
     [Tags]    Rodapé    Funcional        
-    Dado que clico no logo do twitter
-    Então entro na página do Boomg Brasil no twitter
+    Dado que clico no logo do Twitter
+    Então entro na página do Boomg Brasil no Twitter
 
 CT 07.04 - Validar o botão Quem Somos
     [Documentation]     Teste valida o botão Quem Somos
@@ -41,41 +41,31 @@ CT 07.06 - Validar o botão Jogo Promoções
     Dado que clico no botão Promoções
     Então entro na página Promoções
 
-CT 07.07 - Validar o botão pix de Métodos de pagamento do rodapé
-    [Documentation]     Teste valida o botão Jogo Consciente
-    [Tags]    Rodapé    Funcional        
-    Dado que clico no botão "Entrar" (Rodapé)
-    Quando preencho Email real (Rodapé)
-    E preencho Senha válida (Rodapé)
-    E clico no botão "Entrar em Conta" (Rodapé)
-    E que clico no botão pix de Métodos de pagamento do rodapé
-    Então entro na página depositar da minha conta
-
-CT 07.08 - Validar o botão Como Apostar
+CT 07.07 - Validar o botão Como Apostar
     [Documentation]     Teste valida o botão Como Apostar
     [Tags]    Rodapé    Funcional        
     Dado que clico no botão Como Apostar
     Então entro na página Como Apostar
 
-CT 07.09 - Validar o botão Política de Privacidade
+CT 07.08 - Validar o botão Política de Privacidade
     [Documentation]     Teste valida o botão Política de Privacidade
     [Tags]    Rodapé    Funcional        
     Dado que clico no botão Política de Privacidade
     Então entro na página Política de Privacidade
     
-CT 07.10 - Validar o botão Termos e Condições
+CT 07.09 - Validar o botão Termos e Condições
     [Documentation]     Teste valida o botão Termos e Condições
     [Tags]    Rodapé    Funcional        
     Dado que clico no botão Termos e Condições
     Então entro na página Termos e Condições
 
-CT 07.11 - Validar o botão Regras e Procedimentos
+CT 07.10 - Validar o botão Regras e Procedimentos
     [Documentation]     Teste valida o botão Regras e Procedimentos
     [Tags]    Rodapé    Funcional        
     Dado que clico no botão Regras e Procedimentos
     Então entro na página Regras e Procedimentos
 
-CT 07.12 - Validar o botão GAMING CURACAO (RUIM)
+CT 07.11 - Validar o botão GAMING CURACAO (Err)
     [Documentation]     Teste valida o botão Regras e Procedimentos
     [Tags]    Rodapé    Funcional        
     Dado que clico no botão GAMING CURACAO

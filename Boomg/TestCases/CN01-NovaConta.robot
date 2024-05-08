@@ -10,7 +10,7 @@ Documentation      Modúlo de cadastro do usuário no sistema Boomg
 #     [Tags]    NovaConta    Funcional        
 #     Dado que clico no botão "Cadastrar"
 #     Quando preencho CPF real
-#     E clico no botão Passo 2 New
+#     E clico no botão Continuar New
 #     E preencho Email real
 #     E preencho Senha válida
 #     E preencho Confirmação de senha válida
@@ -59,7 +59,7 @@ CT 01.07 - Tentar realizar cadastro de conta sem email válido
     [Tags]    NovaConta    Exceção
     Dado que clico no botão "Cadastrar"
     Quando preencho CPF válido
-    E clico no botão Passo 2
+    E clico no botão Continuar
     E preencho Email inválido
     Então recebo mensagem de erro "Email inválido" na tela
 
@@ -68,7 +68,7 @@ CT 01.08 - Tentar realizar cadastro de conta com email válido porem já cadastr
     [Tags]    NovaConta    Exceção
     Dado que clico no botão "Cadastrar"
     Quando preencho CPF válido
-    E clico no botão Passo 2
+    E clico no botão Continuar
     E preencho Email válido já cadastrado
     E preencho Senha válida
     E preencho Confirmação de senha válida
@@ -82,7 +82,7 @@ CT 01.09 - Tentar realizar cadastro de conta sem Senha válida
     [Tags]    NovaConta    Exceção
     Dado que clico no botão "Cadastrar"
     Quando preencho CPF válido
-    E clico no botão Passo 2
+    E clico no botão Continuar
     E preencho Email válido
     E preencho Senha inválida
     Então recebo mensagem de erro "Senha inválida" na tela
@@ -92,7 +92,7 @@ CT 01.10 - Tentar realizar cadastro de conta sem Confirmação de Senha
     [Tags]    NovaConta    Exceção
     Dado que clico no botão "Cadastrar"
     Quando preencho CPF válido
-    E clico no botão Passo 2
+    E clico no botão Continuar
     E preencho Email válido
     E preencho Senha válida
     E preencho Confirmação de senha inválida
@@ -103,7 +103,7 @@ CT 01.11 - Tentar realizar cadastro de conta sem Telefone válido
     [Tags]    NovaConta    Exceção
     Dado que clico no botão "Cadastrar"
     Quando preencho CPF válido
-    E clico no botão Passo 2
+    E clico no botão Continuar
     E preencho Email válido
     E preencho Senha válida
     E preencho Confirmação de senha válida
@@ -115,7 +115,7 @@ CT 01.12 - Tentar realizar cadastro de conta com Telefone válido já cadastrado
     [Tags]    NovaConta    Exceção
     Dado que clico no botão "Cadastrar"
     Quando preencho CPF válido
-    E clico no botão Passo 2
+    E clico no botão Continuar
     E preencho Email válido
     E preencho Senha válida
     E preencho Confirmação de senha válida
@@ -129,7 +129,7 @@ CT 01.13 - Tentar realizar cadastro sem preechimento de Flag "Maior idade"
     [Tags]    NovaConta    Exceção
     Dado que clico no botão "Cadastrar"
     Quando preencho CPF válido
-    E clico no botão Passo 2
+    E clico no botão Continuar
     E preencho Email válido
     E preencho Senha válida
     E preencho Confirmação de senha válida
@@ -142,7 +142,7 @@ CT 01.14 - Validar link Termos e condições em Cadastro de conta
     [Tags]    NovaConta    
     Dado que clico no botão "Cadastrar"
     Quando preencho CPF válido
-    E clico no botão Passo 2
+    E clico no botão Continuar
     E clico no link "Termos e Condições"
     Então valido tela de "Termos e Condições"
 
@@ -152,3 +152,14 @@ CT 01.15 - Validar "Faça o Login aqui" em Cadastro de conta
     Dado que clico no botão "Cadastrar"
     Quando clico no link "Login aqui"
     Então valido tela de "Login"
+
+CT 01.16 - Validar "Desistir do Cadastro" em Cadastro de conta
+    [Documentation]     Caso de testes valida se botão "Desistir do Cadastro" está funcionando corretamente
+    [Tags]    NovaConta    
+    Dado que clico no botão "Cadastrar"
+    Quando preencho CPF válido
+    E clico no botão Continuar
+    E clico em fechar
+    E clico em "Continuar com o cadastro"
+    E clico em fechar
+    Então clico em "Desistir do cadastro"

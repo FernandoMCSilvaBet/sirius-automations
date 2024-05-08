@@ -16,7 +16,7 @@ E preencho Senha válida (Lgn)
     Input Text                      locator=//input[contains(@name,'senha')]        text=${SenhaCadastrada}
 
 E clico no botão "Entrar em Conta" (Lgn)
-    Click Element                    //button[@type='submit'][contains(.,'Entrar na Conta')]
+    Click Element                    (//span[contains(.,'Entrar')])[2]
     # Wait Until Element Is Visible    //a[contains(@class,'user-header-menu__button-profile')]
 
 Então recebo mensagem de Sucesso "Login realizado com sucesso" na tela (Lgn)
@@ -104,7 +104,7 @@ E preencho Confirmação de senha válida (Lgn)
     Input Text                        locator=//input[contains(@name,'repassword')]   text=${SenhaCadastrada}     
 
 Então recebo mensagem de erro "Código de autorização expirado.." na tela (Lgn)
-    Wait Until Element Is Visible    //i[contains(@class,'notyf__icon--error')]   
+    Wait Until Element Is Visible    //div[@class='notyf__message'] 
     Capture Page Screenshot
 
 # -- 2.13
@@ -142,7 +142,7 @@ E preencho Código vencido (Lgn)
 
 # -- 2.17
 Quando clico no link " Cadastre-se agora!" (Lgn)
-    Click Element                    //a[contains(.,'Cadastre-se agora!')]
+    Click Element                    (//button[@type='button'][contains(.,'Cadastrar')])[2]
 
 Então valido tela de "Criação de conta" (Lgn)
     Wait Until Element Is Visible    //div[@class='modal-box__head modal-box__singup'][contains(.,'Criar Conta')]

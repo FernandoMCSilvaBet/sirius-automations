@@ -13,3 +13,13 @@ Resource  Keywords/05-CassinoaoVivo.robot
 Resource  Keywords/06-Esportes.robot
 Resource  Keywords/07-Rodapé.robot
 Resource  Keywords/08-Cabeçalho.robot
+
+*** Keywords ***
+Fazer login
+    [Arguments]    ${usuario}    ${senha}
+    Click Element                    ${BOTAO_ENTRAR}
+    Wait Until Element Is Visible    ${CampoUsuario}
+    Input Text                       ${CampoUsuario}    ${usuario}
+    Input Text                       ${CampoSenha}      ${senha}
+    Click Element                    //button[@type='submit'][contains(.,'Entrar')]
+    Wait Until Element Is Visible    //div[@class='notyf__message'][contains(.,'Login realizado com sucesso')]

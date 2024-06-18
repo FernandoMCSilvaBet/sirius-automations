@@ -59,3 +59,56 @@ CT 08.09 - Validar o botão BOOMG
     [Tags]    Cabeçalho    Funcional
     Dado que clico no botão BOOMG (Cabeçalho)
     Então entro na página BOOMG (Cabeçalho)
+
+CT 08.10 - Validar o botão FS
+    [Documentation]     Teste valida o botão FS do usuário FERNANDO SILVA
+    [Tags]    Cabeçalho    Funcional
+    Dado que clico no botão "Entrar" (Lgn)
+    Quando preencho Email real (Lgn)
+    E preencho Senha válida (Lgn)
+    E clico no botão "Entrar em Conta" (Lgn)
+    E clico no botão FS (Cabeçalho)
+    Então entro na página FS (Cabeçalho)
+
+CT 08.11 - Validar o botão Depositar
+    [Documentation]     Teste valida o botão Depositar
+    [Tags]    Cabeçalho    Funcional
+    Dado que clico no botão "Entrar" (Lgn)
+    Quando preencho Email real (Lgn)
+    E preencho Senha válida (Lgn)
+    E clico no botão "Entrar em Conta" (Lgn)
+    E clico no botão Depositar (Cabeçalho)
+    Então entro na página Depositar (Cabeçalho)
+
+CT 08.12 - Validar o botão Minha Conta
+    [Documentation]     Teste valida o botão Minha Conta do usuário
+    [Tags]    Cabeçalho    Funcional
+    Dado que clico no botão "Entrar" (Lgn)
+    Quando preencho Email real (Lgn)
+    E preencho Senha válida (Lgn)
+    E clico no botão "Entrar em Conta" (Lgn)
+    E clico no botão FS (Cabeçalho)
+    E clico no botão Minha Conta (Cabeçalho)
+    Então entro na página Dados pessoais (Cabeçalho)
+
+CT 08.13 - Validar o botão Sair da conta
+    [Documentation]     Teste valida o botão Sair da Conta do usuário
+    [Tags]    Cabeçalho    Funcional
+    Dado que clico no botão "Entrar" (Lgn)
+    Quando preencho Email real (Lgn)
+    E preencho Senha válida (Lgn)
+    E clico no botão "Entrar em Conta" (Lgn)
+    E clico no botão FS (Cabeçalho)
+    E clico no botão Sair da Conta (Cabeçalho)
+    Então saio da conta de usuário
+
+CT 08.14 - Validar o botão que atualiza o saldo
+    [Documentation]     Teste valida o botão que atualiza o saldo do usuário conectado
+    [Tags]    Cabeçalho    Funcional
+    Dado que clico no botão "Entrar" (Lgn)
+    Quando preencho Email real (Lgn)
+    E preencho Senha válida (Lgn)
+    E clico no botão "Entrar em Conta" (Lgn)
+    E clico no botão FS (Cabeçalho)
+    E clico no botão que atualizar o saldo (Cabeçalho)
+    Então atualizo o saldo (Cabeçalho)

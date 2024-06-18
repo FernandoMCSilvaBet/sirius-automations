@@ -5,6 +5,7 @@ ${URLHML}                   https://homolog.boomg.com/
 # ...    https://www.boomg.com/
 
 ${BROWSER}                  chrome
+${LOGO}                     (//a[contains(@class,'logo')])[1]
 
 # Cadastro e Login
 ${CPFCadastrado}            10561665761
@@ -46,10 +47,15 @@ ${BOTAO_CASSINO}                        (//span[contains(.,'Cassino')])[1]
 ${BOTAO_CASSINOAOVIVO}                  (//span[contains(@class,'default-header__section-label')])[2]
 ${BOTAO_ESPORTES}                       //span[@class='default-header__section-label'][contains(.,'Esportes')]
 ${BOTAO_PESQUISAR}                      //span[@class='icon']
-${BOTAO_SUPORTE}                        //span[@class='default-header__button-menu__label-desktop'][contains(.,'Suporte')]
+${BOTAO_SUPORTE}                        //span[contains(.,'Suporte')]
 ${BOTAO_PROMOCOES}                      (//div[contains(.,'Promoções')])[7]
 ${BOTAO_ENTRAR}                         //button[@class='user-header-menu__button-login'][contains(.,'Entrar')]                      
 ${BOTAO_CADASTRAR}                      //span[contains(.,'Cadastrar')]
 ${BOTAO_BOOMG}                          //a[contains(@class,'default-header__logo')]
+${BOTAO_FS}                             //span[@class='initials'][contains(.,'FS')] 
+${BOTAO_DEPOSITAR}                      //a[contains(.,'Depositar')]
+${BOTAO_MINHA CONTA}                    //a[contains(.,'Minha Conta')]
+${BOTAO_SAIRDACONTA}                    //span[contains(.,'Sair da conta')]
+${BOTAO_ATUALIZARSALDO}                 (//div[contains(@class,'icon-refresh')])[2]
 
 ${SCROLL_BAIXO}                         window.scrollTo(0, document.body.scrollHeight);

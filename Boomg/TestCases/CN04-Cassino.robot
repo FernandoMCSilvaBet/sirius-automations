@@ -462,21 +462,28 @@ CT 04.58 - Validar o botão Animais lateral
 #     Quando clico no botão Mais Jogados lateral
 #     Então entro na página Mais Jogados
 
-# CT 04.66 - Validar o botão Suporte lateral
-#     [Documentation]     Teste valida o botão Ano Novo lateral
-#     [Tags]    Cassino    Funcional
-#     Dado que clico no menu Cassino        
-#     Quando clico no botão Suporte lateral
-#     Então entro na página Suporte lateral
+CT 04.66 - Validar o botão Suporte lateral
+    [Documentation]     Teste valida o botão Ano Novo lateral
+    [Tags]    Cassino    Funcional
+    Dado que clico no menu Cassino        
+    Quando clico no botão Suporte lateral
+    Então entro na página Suporte lateral
 
-CT 04.67 - Tentar jogar nos jogos sem estar logado
+CT 04.67 - Validar o botão Jogo Consciente lateral
+    [Documentation]     Teste valida o botão Jogo Consciente
+    [Tags]    Cassino    Funcional
+    Dado que clico no menu Cassino        
+    Quando clico no botão Jogo Consciente
+    Então entro na página Jogo Consciente
+
+CT 04.68 - Tentar jogar nos jogos sem estar logado
     [Documentation]     Teste valida a impossibilidade de jogar nos jogos do Menu Cassino sem estar conectado ao sistema da plataforma
     [Tags]    Cassino    Funcional
     Dado que clico no menu Cassino  
     Quando clico sem estar logado no botão "Fortune Tiger"
     Então não entro na página do jogo "Fortune Tiger"
 
-CT 04.68 - Validar o jogo Fortune Tiger
+CT 04.69 - Validar o jogo Fortune Tiger
     [Documentation]     Teste valida jogar o jogo Fortune Tiger do Menu Cassino
     [Tags]    Cassino    Funcional
     Dado que clico no menu Cassino
@@ -486,7 +493,7 @@ CT 04.68 - Validar o jogo Fortune Tiger
     E clico no botão "Entrar em Conta" (Lgn)
     Então jogo o jogo "Fortune Tiger"
 
-CT 04.69 - Tentar jogar sem saldo
+CT 04.70 - Tentar jogar sem saldo
     [Documentation]     Teste não valida a possibilidade de jogar sem saldo em conta nos jogos do Menu Cassino
     [Tags]    Cassino    Funcional
     Dado que clico no menu Cassino

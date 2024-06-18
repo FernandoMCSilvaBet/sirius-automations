@@ -483,7 +483,7 @@ Quando clico no botão Originais lateral
     
 Então entro na página Originais
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Originais')]
-    Capture Page Screenshot    CT4.50.png  
+    Capture Page Screenshot    CT4.46.png  
 
 # --4.47
 Quando clico no botão Crash Games lateral
@@ -494,7 +494,7 @@ Quando clico no botão Crash Games lateral
 
 Então entro na página Crash Games
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Crash Games')]
-    Capture Page Screenshot    CT4.51.png
+    Capture Page Screenshot    CT4.47.png
 
 # --4.48
 Quando clico no botão Cassino lateral
@@ -504,7 +504,7 @@ Quando clico no botão Cassino lateral
 
 Então entro na página Cassino
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Cassino')]
-    Capture Page Screenshot    CT4.52.png
+    Capture Page Screenshot    CT4.48.png
 
 # --4.49
 Quando clico no botão Instantâneas lateral
@@ -513,7 +513,7 @@ Quando clico no botão Instantâneas lateral
     Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Instantâneas')]
 Então entro na página Instantâneas
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Instantâneas')]
-    Capture Page Screenshot    CT4.53.png
+    Capture Page Screenshot    CT4.49.png
 
 # --4.50
 Quando clico no botão Populares lateral
@@ -524,7 +524,7 @@ Quando clico no botão Populares lateral
 
 Então entro na página Populares
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Populares')]
-    Capture Page Screenshot    CT4.54.png
+    Capture Page Screenshot    CT4.50.png
 
 # --4.51
 Quando clico no botão Natal lateral
@@ -534,7 +534,7 @@ Quando clico no botão Natal lateral
 
 Então entro na página Natal
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Natal')]
-    Capture Page Screenshot    CT4.55.png
+    Capture Page Screenshot    CT4.51.png
 
 # --4.52
 Quando clico no botão Novos lateral
@@ -544,7 +544,7 @@ Quando clico no botão Novos lateral
     
 Então entro na página Novos
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Novos')]
-    Capture Page Screenshot    CT4.56.png
+    Capture Page Screenshot    CT4.52.png
 
 # --4.53
 Quando clico no botão Drops & Wins lateral
@@ -553,7 +553,7 @@ Quando clico no botão Drops & Wins lateral
 
 Então entro na página Drops & Wins
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Drops & Wins')]
-    Capture Page Screenshot    CT4.57.png
+    Capture Page Screenshot    CT4.53.png
 
 # --4.54
 Quando clico no botão Multi Linhas lateral
@@ -561,7 +561,7 @@ Quando clico no botão Multi Linhas lateral
     Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Multi Linhas')]
 Então entro na página Multi Linhas
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Multi Linhas')]
-    Capture Page Screenshot    CT4.58.png
+    Capture Page Screenshot    CT4.54.png
 
 # --4.55
 Quando clico no botão Compra de Bônus lateral
@@ -570,7 +570,7 @@ Quando clico no botão Compra de Bônus lateral
 
 Então entro na página Compra de Bônus
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Compra de Bônus')]
-    Capture Page Screenshot    CT4.59.png
+    Capture Page Screenshot    CT4.55.png
 
 # --4.56
 Quando clico no botão Épicos lateral
@@ -579,7 +579,7 @@ Quando clico no botão Épicos lateral
 
 Então entro na página Épicos
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Épicos')]
-    Capture Page Screenshot    CT4.60.png
+    Capture Page Screenshot    CT4.56.png
 
 # --4.57
 Quando clico no botão Acumulados lateral
@@ -587,7 +587,7 @@ Quando clico no botão Acumulados lateral
     Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Acumulados')]
 Então entro na página Acumulados
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Acumulados')]
-    Capture Page Screenshot    CT4.61.png
+    Capture Page Screenshot    CT4.57.png
 
 # --4.58
 Quando clico no botão Animais lateral
@@ -597,7 +597,7 @@ Quando clico no botão Animais lateral
 
 Então entro na página Animais
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Animais')]
-    Capture Page Screenshot    CT4.62.png
+    Capture Page Screenshot    CT4.58.png
 
 # --4.59
 Quando clico no botão Temáticos lateral
@@ -607,7 +607,7 @@ Quando clico no botão Temáticos lateral
 
 Então entro na página Temáticos
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Temáticos')]
-    Capture Page Screenshot    CT4.63.png
+    Capture Page Screenshot    CT4.59.png
 
 # --4.60
 Quando clico no botão Esportivos lateral
@@ -617,7 +617,7 @@ Quando clico no botão Esportivos lateral
 
 Então entro na página Esportivos
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Esportivos')]
-    Capture Page Screenshot    CT4.64.png
+    Capture Page Screenshot    CT4.60.png
 
 # --4.61
 Quando clico no botão Vídeo Bingo lateral
@@ -627,7 +627,7 @@ Quando clico no botão Vídeo Bingo lateral
 
 Então entro na página Vídeo Bingo
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Vídeo Bingo')]
-    Capture Page Screenshot    CT4.65.png
+    Capture Page Screenshot    CT4.61.png
 
 # --4.62
 Quando clico no botão Vídeo Poker lateral
@@ -637,7 +637,7 @@ Quando clico no botão Vídeo Poker lateral
 
 Então entro na página Vídeo Poker
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Vídeo Poker')]
-    Capture Page Screenshot    CT4.66.png
+    Capture Page Screenshot    CT4.62.png
 
 # --4.63
 Quando clico no botão Ano Novo lateral
@@ -647,7 +647,7 @@ Quando clico no botão Ano Novo lateral
 
 Então entro na página Ano Novo
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Ano Novo')]
-    Capture Page Screenshot    CT4.67.png
+    Capture Page Screenshot    CT4.63.png
 
 # --4.64
 Quando clico no botão Teste Posicao lateral
@@ -657,7 +657,7 @@ Quando clico no botão Teste Posicao lateral
 
 Então entro na página Teste Posicao
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Teste Posicao')]
-    Capture Page Screenshot    CT4.68.png
+    Capture Page Screenshot    CT4.64.png
 
 # --4.65
 Quando clico no botão Mais Jogados lateral
@@ -667,14 +667,13 @@ Quando clico no botão Mais Jogados lateral
 
 Então entro na página Mais Jogados
     Wait Until Element Is Visible    //h1[@class='page-slots-category__header-text'][contains(.,'Mais Jogados')]
-    Capture Page Screenshot    CT4.69.png
+    Capture Page Screenshot    CT4.65.png
 
 # --4.66
 Quando clico no botão Suporte lateral
-    Execute Javascript              window.scrollTo(0, document.body.scrollHeight);
-
-    Wait Until Element Is Visible    (//span[contains(@class,'sidebar_nav__item-title')])[21]
-    Click Element                    (//span[contains(@class,'sidebar_nav__item-title')])[21]
+    Click Element                    (//div[contains(@class,'img')])[1]
+    Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Suporte')]
+    Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Suporte')]
 
 Então entro na página Suporte lateral
     # O comando abaixo serve para alterar a aba que estamos testando
@@ -682,17 +681,27 @@ Então entro na página Suporte lateral
     Switch Window       ${handles_before}[1]
     Sleep    10s
     Wait Until Element Is Visible    (//div[contains(.,'Como posso ajudá-lo?')])[5]
-    Capture Page Screenshot    CT4.70.png
+    Capture Page Screenshot    CT4.66.png
 
 # --4.67
+Quando clico no botão Jogo Consciente
+    Click Element                    (//div[contains(@class,'img')])[1]
+    Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Jogo Consciente')]
+    Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Jogo Consciente')]
+
+Então entro na página Jogo Consciente
+    Wait Until Element Is Visible   //div[@class='container'][contains(.,'Jogo ConscienteGarantindo que todos apostem de maneira responsável.')]
+    Capture Page Screenshot    CT4.67.png
+
+# --4.68
 Quando clico sem estar logado no botão "Fortune Tiger"
     Click Element                    //img[contains(@alt,'Fortune Tiger')]
 
 Então não entro na página do jogo "Fortune Tiger"
     Wait Until Element Is Visible    //div[@class='modal-box__content__form'][contains(.,'Bem-vindo de volta!E-mail, Celular ou CPF*Senha*Lembrar loginEsqueceu a senha?EntrarCadastrar')]
-    Capture Page Screenshot    CT4.46.png
+    Capture Page Screenshot    CT4.68.png
 
-# --4.68
+# --4.69
 E clico em "Fortune Tiger"
     Wait Until Element Is Visible    (//img[@alt='Fortune Tiger'])[1]
     Click Element                    (//img[@alt='Fortune Tiger'])[1]
@@ -700,9 +709,9 @@ E clico em "Fortune Tiger"
 Então jogo o jogo "Fortune Tiger"
     Wait Until Element Is Visible    (//div[contains(.,'Fortune Tiger')])[6]
     Sleep    5s
-    Capture Page Screenshot    CT4.47.png
+    Capture Page Screenshot    CT4.69.png
 
-# --4.69
+# --4.70
 E clico no jogo "Cash Patrol"
     Wait Until Element Is Visible    (//div[contains(.,'Fortune Tiger')])[6]
     Click Element                    (//div[contains(.,'Fortune Tiger')])[6]
@@ -712,7 +721,6 @@ E clico no jogo "Cash Patrol"
 
 Então não jogo "Cash Patrol" por não ter saldo
     Wait Until Element Is Visible    //button[@type='submit'][contains(.,'Entrar na Conta')]
-
     Wait Until Element Is Visible    //div[@class='game-frame-bar__title'][contains(.,'Cash Patrol')]
     Click Element                    //button[@type='submit'][contains(.,'Entrar na Conta')]
-    Capture Page Screenshot    CT4.48.png
+    Capture Page Screenshot    CT4.70.png

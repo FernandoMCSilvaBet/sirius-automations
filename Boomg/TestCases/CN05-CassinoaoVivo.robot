@@ -256,7 +256,7 @@ CT 05.36 - Tentar jogar nos jogos sem estar logado
     [Documentation]     Teste valida a impossibilidade de jogar (Roleta Brasileira) por não estar logado
     [Tags]    Cassino Ao Vivo    Funcional
     Dado que acesso o Menu Cassino Ao Vivo
-    E clico no botão "Roleta Brasileira"
+    E clico em "Roleta Brasileira"
     Então não entro na página do jogo "Roleta Brasileira"
 
 CT 05.37 - Validar o jogo Roleta Brasileira

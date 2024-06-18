@@ -7,10 +7,11 @@ ${AVIATOR}                  AVIATOR
 ${FORTUNE_TIGER}            FORTUNE TIGER
 ${SPACEMAN}                 SPACEMAN
 ${MINES}                    MINES
-${FREESTYLE}                FREESTYLE
+${FREESTYLE}                FREESTYLE   
+${JURASSIC_KINGDOM}         JURASSIC KINGDOM
 ${FORTUNE_OX}               FORTUNE OX
 ${GATES_OLYMPUS}            GATES OF OLYMPUS
-${JOKERS_JEWELS}            JOKER'S JEWELS
+${JOKERS_JEWELS}            S JEWELS
 ${FORTUNE_RABBIT}           FORTUNE RABBIT
 ${PLINKO}                   PLINKO
 ${DRAGON_HATCH}             DRAGON HATCH
@@ -24,7 +25,7 @@ ${DOUBLE_FORTUNE}           DOUBLE FORTUNE
 ${PIGGY_GOLD}               PIGGY GOLD
 ${DICE}                     DICE
 ${BIGBASS_BONANZA}          BIG BASS BONANZA
-${GOAL}                     GOAL
+${GO_GOAL}                  GOAL
 ${BUFFALO_KING}             BUFFALO KING
 ${BIGBASSBONANZA_MEGAWAYS}  BIG BASS BONANZA MEGAWAYS
 ${DRAGON_HERO}              DRAGON HERO
@@ -49,7 +50,6 @@ ${HALLOWEEN_3}              HALLOWEEN 3
 ${HAWAIIAN_TIKI}            HAWAIIAN TIKI
 ${JOHNHUNTER}               JOHN HUNTER AND THE TOMB
 ${JUNGLE_DELIGHT}           JUNGLE DELIGHT
-${JURASSIC_KINGDOM}         JURASSIC KINGDOM
 ${LEGENDARY_KING}           LEGENDARY MONKEY KING
 ${MAJESTIC_TREASURES}       MAJESTIC TREASURES
 ${MINI_ROULETTE}            MINI ROULETTE
@@ -73,10 +73,25 @@ ${WILD_SHOWDOWN}            WILD BOUNTY SHOWDOWN
 ${WILD_SPELLS}              WILD SPELLS
 ${WINWIN_WON}               WIN WIN WON
 ${ZERO_DAY}                 ZERO DAY
+${GEMS_BONANZA}             GEMS BONANZA
+${THE_DRAGONTIGER}          THE DRAGON TIGER
+${WOLF_GOLD}                WOLF GOLD
+${CHRISTMAS_BONANZA}        CHRISTMAS BIG BASS BONANZA
+${BIGBASS_SPLASH}           BIG BASS SPLASH
+${BUFFALO_KINGMEGAWAYS}     BUFFALO KING MEGAWAYS
+${FRUIT_PARTY}              FRUIT PARTY
+${THEDOG_HOUSE}             THE DOG HOUSE
+${MASTERCHENS_FORTUNE}      MASTER CHEN'S FORTUNE
+${11_CHAMPIONS}             11 CHAMPIONS
+${9_MASKSOFFIRE}            9 MASKS OF FIRE
+${9 POTS_OFGOLD}            9 POTS OF GOLD
+${ALASKAN_FISHING}          ALASKAN FISHING
+${CARNAVAL}                 CARNAVAL
 
 ${carrego_jogo}             //div[contains(@class,'cover')]
 ${abro_jogo}                //div[contains(@class,'title')]
 ${locator_botao_jogar}      (//span[contains(.,'JOGAR')])[1]
+
 
 *** Keywords ***
 # --0.1
@@ -85,7 +100,7 @@ Dado que clico em Pesquisar
     Sleep    2s
 
 Quando clico em ${nome_jogo}
-    Input Text                         locator=//input[contains(@placeholder,'Pesquisar')]      text=${nome_jogo}
+    Input Text                         locator=//input[@type='text']      text=${nome_jogo}
     Sleep    5s
     Click Element                      ${locator_botao_jogar}
 

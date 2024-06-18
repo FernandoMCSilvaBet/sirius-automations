@@ -65,8 +65,8 @@ CT 07.10 - Validar o botão Regras e Procedimentos
     Dado que clico no botão Regras e Procedimentos
     Então entro na página Regras e Procedimentos
 
-CT 07.11 - Validar o botão GAMING CURACAO (Err)
-    [Documentation]     Teste valida o botão Regras e Procedimentos
+CT 07.11 - Validar o botão GAMING CURACAO (Erro)
+    [Documentation]     Teste valida o botão GAMING CURACAO
     [Tags]    Rodapé    Funcional        
     Dado que clico no botão GAMING CURACAO
     Então entro na página GAMING CURACAO

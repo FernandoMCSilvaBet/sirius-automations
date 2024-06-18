@@ -27,7 +27,7 @@ Dado que clico no botão Esportes (Cabeçalho)
     Click Element                    ${BOTAO_ESPORTES}
 
 Então entro no botão Esportes (Cabeçalho)
-    Wait Until Element Is Visible    //h2[@class='h2'][contains(.,'Destaques ao vivo')]
+    Wait Until Element Is Visible    //div[contains(@class,'sports-landing-page-wrapper')]
     Capture Page Screenshot    CT8.3.png
 
 # --8.4
@@ -40,7 +40,7 @@ Quando realizo pesquisa (Cabeçalho)
     Sleep    8s
 
 Então pesquiso com sucesso (Cabeçalho)
-    Wait Until Element Is Visible      (//span[contains(.,'JOGAR')])[1]
+    Wait Until Element Is Visible      //div[@class='wrapper']
     Capture Page Screenshot    CT8.4.png
 
 
@@ -93,3 +93,48 @@ Dado que clico no botão BOOMG (Cabeçalho)
 Então entro na página BOOMG (Cabeçalho)
     Wait Until Element Is Visible    (//ul[contains(.,'PopularesCrash GamesCassinoNovosInstantâneasAnimaisNatal')])[2]
     Capture Page Screenshot    CT8.9.png
+
+# --8.10
+E clico no botão FS (Cabeçalho)
+    Wait Until Element Is Visible    ${BOTAO_FS}
+    Click Element                    ${BOTAO_FS}
+
+Então entro na página FS (Cabeçalho)
+    Wait Until Element Is Visible    //span[contains(.,'Minha Conta')]
+    Capture Page Screenshot    CT8.10.png
+
+# --8.11
+E clico no botão Depositar (Cabeçalho)
+    Wait Until Element Is Visible    ${BOTAO_DEPOSITAR}
+    Click Element                    ${BOTAO_DEPOSITAR}
+
+Então entro na página Depositar (Cabeçalho)
+    Wait Until Element Is Visible    //h1[contains(.,'Depósito')]
+    Capture Page Screenshot    CT8.11.png
+
+# --8.12
+E clico no botão Minha Conta (Cabeçalho)
+    Wait Until Element Is Visible    ${BOTAO_MINHA CONTA}
+    Click Element                    ${BOTAO_MINHA CONTA}
+
+Então entro na página Dados pessoais (Cabeçalho)
+    Wait Until Element Is Visible    //p[contains(.,'Dados pessoais')]
+    Capture Page Screenshot    CT8.12.png
+
+# --8.13
+ E clico no botão Sair da conta (Cabeçalho)
+    Wait Until Element Is Visible    ${BOTAO_SAIRDACONTA} 
+    Click Element                    ${BOTAO_SAIRDACONTA} 
+
+Então saio da conta de usuário
+    Wait Until Element Is Visible    //button[contains(.,'Cadastrar')]
+    Capture Page Screenshot    CT8.12.png
+
+# --8.14
+E clico no botão que atualizar o saldo (Cabeçalho)
+    Wait Until Element Is Visible    ${BOTAO_ATUALIZARSALDO} 
+    Click Element                    ${BOTAO_ATUALIZARSALDO} 
+
+Então atualizo o saldo (Cabeçalho)
+    Wait Until Element Is Visible    ${BOTAO_ATUALIZARSALDO}
+    Capture Page Screenshot    CT8.14.png

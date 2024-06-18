@@ -17,7 +17,7 @@ Quando preencho CPF real
     Wait Until Element Is Visible    //input[@name='nome']
 
 E preencho Email real
-    Input Text                      locator=${CampoEmail}       text=${EmailReal}
+    Input Text                      locator=${CampoUsuario}       text=${EmailReal}
 
 E preencho Telefone real
     Input Text                      locator=${CampoTelefone}   text=${TelefoneReal}

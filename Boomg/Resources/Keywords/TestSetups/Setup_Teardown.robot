@@ -2,6 +2,7 @@
 Documentation    Abre e fecha navegador
 Resource    ../../Main.robot
 # Resource    ../Config/Variables.robot
+Library    XML
 
 *** Keywords ***
 Abrir navegador

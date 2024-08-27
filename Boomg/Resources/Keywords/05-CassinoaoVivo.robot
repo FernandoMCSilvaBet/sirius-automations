@@ -2,17 +2,17 @@
 Documentation      Modúlo de Cassino Ao Vivo do usuário no sistema Boomg
 Resource           ../Main.robot
 
-*** Variable ***
-${aovivo_superior}             //div[@class='we-nav-section-title'][contains(.,'Ao Vivo')]
-${playtech_superior}           //div[@class='we-nav-section-title'][contains(.,'Playtech')]
-${baccarat_superior}           //div[@class='we-nav-section-title'][contains(.,'Baccarat')]
-${pragmaticplay_superior}      //div[@class='we-nav-section-title'][contains(.,'Pragmatic Play')]
-${blackjack_superior}          //div[@class='we-nav-section-title'][contains(.,'Blackjack')]
-${gameshows_superior}          //div[@class='we-nav-section-title'][contains(.,'Game Shows')]
-${ezugi_superior}              //div[@class='we-nav-section-title'][contains(.,'Ezugi')]
-${evolution_superior}          //div[@class='we-nav-section-title'][contains(.,'Evolution')]
-${jogosdemesa_superior}        //div[@class='we-nav-section-title'][contains(.,'Jogos de Mesa')]
-${roleta_superior}             //div[@class='we-nav-section-title'][contains(.,'Roleta')]
+*** Variables ***
+${aovivo_superior}             //div[@class='we-nav-section-wrapper'][contains(.,'Ao Vivo')]
+${playtech_superior}           //div[@class='we-nav-section-wrapper'][contains(.,'Playtech')]
+${baccarat_superior}           //div[@class='we-nav-section-wrapper'][contains(.,'Baccarat')]
+${pragmaticplay_superior}      //div[@class='we-nav-section-wrapper'][contains(.,'Pragmatic Play')]
+${blackjack_superior}          //div[@class='we-nav-section-wrapper'][contains(.,'Blackjack')]
+${gameshows_superior}          //div[@class='we-nav-section-wrapper'][contains(.,'Game Shows')]
+${ezugi_superior}              //div[@class='we-nav-section-wrapper'][contains(.,'Ezugi')]
+${evolution_superior}          //div[@class='we-nav-section-wrapper'][contains(.,'Evolution')]
+${jogosdemesa_superior}        //div[@class='we-nav-section-wrapper'][contains(.,'Jogos de Mesa')]
+${roleta_superior}             //div[@class='we-nav-section-wrapper'][contains(.,'Roleta')]
 
 ${ao vivo_central}             //div[@class='category-resume__title-text'][contains(.,'Ao Vivo')]
 ${playtech_central}            //div[@class='category-resume__title-text'][contains(.,'Playtech')]
@@ -44,11 +44,11 @@ ${locator_botao_jogar}         (//span[contains(.,'JOGAR')])[1]
 *** Keywords ***
 # --5.1
 Dado que acesso o Menu Cassino Ao Vivo
-    Wait Until Element Is Visible    (//span[contains(@class,'default-header__section-label')])[2]
-    Click Element                    (//span[contains(@class,'default-header__section-label')])[2]                            
+    Wait Until Element Is Visible    //p[contains(.,'Cassino ao vivo')]
+    Click Element                    //p[contains(.,'Cassino ao vivo')]                            
 
 Então entro na página dos jogos do Cassino Ao Vivo
-    Wait Until Element Is Visible   (//span[contains(@class,'default-header__section-label')])[2]
+    Wait Until Element Is Visible   (//div[contains(.,'Cassino ao vivo')])[8]
     Capture Page Screenshot    CT5.1.png
 
 # --5.2

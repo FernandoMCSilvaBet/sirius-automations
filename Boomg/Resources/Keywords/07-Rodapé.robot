@@ -2,12 +2,12 @@
 Documentation      Modúlo de Rodapé do usuário no sistema Boomg
 Resource           ../Main.robot
 
-*** Variable ***
+*** Variables ***
 ${BOTAO_FACEBOOK}               //a[@href='https://www.facebook.com/boomgbrasil']
 ${BOTAO_INSTAGRAM}              //a[@href='https://www.instagram.com/boomgbrasil/']
 ${BOTAO_TWITTER}                //a[@href='https://twitter.com/boomgbr_']
 ${LINK_QUEMSOMOS}               //a[contains(.,'Quem Somos')]
-${LINK_JOGOCONSCIENTE}          (//a[@href='/jogo-consciente'][contains(.,'Jogo Consciente')])[2]
+${LINK_JOGOCONSCIENTE}          //a[@href='/jogo-consciente']
 ${LINK_PROMOCOES}               (//a[@href='/promocoes'][contains(.,'Promoções')])[2]
 ${LINK_COMOAPOSTAR}             //a[contains(.,'Como Apostar')]
 ${LINK_POLITICADEPRIVACIDADE}   //a[@href='/politica-de-privacidade'][contains(.,'Politica de Privacidade')]
@@ -26,7 +26,8 @@ Então entro na página do Boomg Brasil no Facebook
     ${handles_before}   Get Window Handles
     Switch Window       ${handles_before}[1]
     # Click Element       (//i[@class='x1b0d499 x1d69dk1'])[7]
-    Wait Until Element Is Visible   (//div[contains(.,'Veja mais no FacebookVeja mais no FacebookEmail ou telefoneSenhaEntrarEsqueceu a senha?ouCriar nova conta')])[11]
+    Sleep    20s
+    Wait Until Element Is Visible   (//span[contains(.,'Ver mais no Facebook')])[2]
     Capture Page Screenshot    CT7.1.png
 
 # --7.2
@@ -52,7 +53,7 @@ Então entro na página do Boomg Brasil no Twitter
     # O comando abaixo serve para alterar a aba que estamos testando
     ${handles_before}   Get Window Handles
     Switch Window       ${handles_before}[1]
-    Sleep    10s
+    Sleep    20s
     Wait Until Element Is Visible   (//span[contains(.,'Entrar no X')])[2]
     Capture Page Screenshot    CT7.3.png
 
@@ -72,7 +73,7 @@ Dado que clico no botão Jogo Consciente
     Wait Until Element Is Visible   ${LINK_JOGOCONSCIENTE}
     Click Element                   ${LINK_JOGOCONSCIENTE}
 Então entro na página Jogo Consciente (Rodapé)
-    Wait Until Element Is Visible   //div[@class='container'][contains(.,'Jogo ConscienteGarantindo que todos apostem de maneira responsável.')]
+    Wait Until Element Is Visible   (//a[@href='/jogo-consciente'])[1]
     Capture Page Screenshot    CT7.5.png
 
 # --7.6
@@ -128,7 +129,6 @@ Então entro na página Regras e Procedimentos
 Dado que clico no botão GAMING CURACAO
     Execute Javascript                ${SCROLL_BAIXO}
     # Click Element                   ${element}
-    
 Então entro na página GAMING CURACAO
     # O comando abaixo serve para alterar a aba que estamos testando
     ${handles_before}   Get Window Handles

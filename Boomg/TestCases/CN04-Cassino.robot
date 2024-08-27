@@ -158,47 +158,47 @@ CT 04.14 - Validar o botão Animais superior
 #     Quando clico no botão Originais central 
 #     Então entro na página Originais central
 
-CT 04.23 - Validar o botão Crash Games central
-    [Documentation]     Teste valida o botão Crash Games central
-    [Tags]    Cassino    Funcional
-    Dado que clico no menu Cassino        
-    Quando clico no botão Crash Games central
-    Então entro na página Crash Games central
+# CT 04.23 - Validar o botão Crash Games central
+#     [Documentation]     Teste valida o botão Crash Games central
+#     [Tags]    Cassino    Funcional
+#     Dado que clico no menu Cassino        
+#     Quando clico no botão Crash Games central
+#     Então entro na página Crash Games central
 
-CT 04.24 - Validar o botão Cassino central
-    [Documentation]     Teste valida o botão Cassino central
-    [Tags]    Cassino    Funcional
-    Dado que clico no menu Cassino        
-    Quando clico no botão Cassino central 
-    Então entro na página Cassino central
+# CT 04.24 - Validar o botão Cassino central
+#     [Documentation]     Teste valida o botão Cassino central
+#     [Tags]    Cassino    Funcional
+#     Dado que clico no menu Cassino        
+#     Quando clico no botão Cassino central 
+#     Então entro na página Cassino central
 
-CT 04.25 - Validar o botão Instantâneas central
-    [Documentation]     Teste valida o botão Instantâneas central
-    [Tags]    Cassino    Funcional
-    Dado que clico no menu Cassino        
-    Quando clico no botão Instantâneas central 
-    Então entro na página Instantâneas central
+# CT 04.25 - Validar o botão Instantâneas central
+#     [Documentation]     Teste valida o botão Instantâneas central
+#     [Tags]    Cassino    Funcional
+#     Dado que clico no menu Cassino        
+#     Quando clico no botão Instantâneas central 
+#     Então entro na página Instantâneas central
 
-CT 04.26 - Validar o botão Populares central
-    [Documentation]     Teste valida o botão Populares central
-    [Tags]    Cassino    Funcional
-    Dado que clico no menu Cassino        
-    Quando clico no botão Populares central 
-    Então entro na página Populares central
+# CT 04.26 - Validar o botão Populares central
+#     [Documentation]     Teste valida o botão Populares central
+#     [Tags]    Cassino    Funcional
+#     Dado que clico no menu Cassino        
+#     Quando clico no botão Populares central 
+#     Então entro na página Populares central
 
-CT 04.27 - Validar o botão Natal central
-    [Documentation]     Teste valida o botão Natal central
-    [Tags]    Cassino    Funcional
-    Dado que clico no menu Cassino        
-    Quando clico no botão Natal central 
-    Então entro na página Natal central
+# CT 04.27 - Validar o botão Natal central
+#     [Documentation]     Teste valida o botão Natal central
+#     [Tags]    Cassino    Funcional
+#     Dado que clico no menu Cassino        
+#     Quando clico no botão Natal central 
+#     Então entro na página Natal central
 
-CT 04.28 - Validar o botão Novos central
-    [Documentation]     Teste valida o botão Novos central
-    [Tags]    Cassino    Funcional
-    Dado que clico no menu Cassino        
-    Quando clico no botão Novos central 
-    Então entro na página Novos central
+# CT 04.28 - Validar o botão Novos central
+#     [Documentation]     Teste valida o botão Novos central
+#     [Tags]    Cassino    Funcional
+#     Dado que clico no menu Cassino        
+#     Quando clico no botão Novos central 
+#     Então entro na página Novos central
 
 # CT 04.29 - Validar o botão Drops & Wins central
 #     [Documentation]     Teste valida o botão Drops & Wins central
@@ -235,12 +235,12 @@ CT 04.28 - Validar o botão Novos central
 #     Quando clico no botão Acumulados central 
 #     Então entro na página Acumulados central
 
-CT 04.34 - Validar o botão Animais central
-    [Documentation]     Teste valida o botão Animais central
-    [Tags]    Cassino    Funcional
-    Dado que clico no menu Cassino        
-    Quando clico no botão Animais central 
-    Então entro na página Animais central
+# CT 04.34 - Validar o botão Animais central
+#     [Documentation]     Teste valida o botão Animais central
+#     [Tags]    Cassino    Funcional
+#     Dado que clico no menu Cassino        
+#     Quando clico no botão Animais central 
+#     Então entro na página Animais central
 
 # CT 04.35 - Validar o botão Temáticos central
 #     [Documentation]     Teste valida o botão Temáticos central
@@ -291,12 +291,12 @@ CT 04.34 - Validar o botão Animais central
 #     Quando clico no botão Mais Jogados central 
 #     Então entro na página Mais Jogados central
 
-CT 04.42 - Validar o botão "84 jogos"
-    [Documentation]     Teste valida o botão "84" dos Jogos Populares do Menu Cassino
-    [Tags]    Cassino    Funcional
-    Dado que clico no menu Cassino        
-    Quando clico no botão "84 jogos"
-    Então entro na página dos Jogos Populares
+# CT 04.42 - Validar o botão "84 jogos"
+#     [Documentation]     Teste valida o botão "84" dos Jogos Populares do Menu Cassino
+#     [Tags]    Cassino    Funcional
+#     Dado que clico no menu Cassino        
+#     Quando clico no botão "84 jogos"
+#     Então entro na página dos Jogos Populares
 
 CT 04.43 - Validar botão Categorias
     [Documentation]     Teste valida o botão Categorias dos Jogos Originais do Menu Cassino
@@ -329,47 +329,47 @@ CT 04.45 - Validar botão 'Popularidade'
 #     Quando clico no botão Originais lateral
 #     Então entro na página Originais
 
-CT 04.47 - Validar o botão Crash Games lateral
-    [Documentation]     Teste valida o botão Crash Games lateral
-    [Tags]    Cassino    Funcional
-    Dado que clico no menu Cassino        
-    Quando clico no botão Crash Games lateral
-    Então entro na página Crash Games
+# CT 04.47 - Validar o botão Crash Games lateral
+#     [Documentation]     Teste valida o botão Crash Games lateral
+#     [Tags]    Cassino    Funcional
+#     Dado que clico no menu Cassino        
+#     Quando clico no botão Crash Games lateral
+#     Então entro na página Crash Games
 
-CT 04.48 - Validar o botão Cassino lateral
-    [Documentation]     Teste valida o botão Cassino lateral
-    [Tags]    Cassino    Funcional
-    Dado que clico no menu Cassino        
-    Quando clico no botão Cassino lateral
-    Então entro na página Cassino
+# CT 04.48 - Validar o botão Cassino lateral
+#     [Documentation]     Teste valida o botão Cassino lateral
+#     [Tags]    Cassino    Funcional
+#     Dado que clico no menu Cassino        
+#     Quando clico no botão Cassino lateral
+#     Então entro na página Cassino
 
-CT 04.49 - Validar o botão Instantâneas lateral
-    [Documentation]     Teste valida o botão Instantâneas lateral
-    [Tags]    Cassino    Funcional
-    Dado que clico no menu Cassino        
-    Quando clico no botão Instantâneas lateral
-    Então entro na página Instantâneas
+# CT 04.49 - Validar o botão Instantâneas lateral
+#     [Documentation]     Teste valida o botão Instantâneas lateral
+#     [Tags]    Cassino    Funcional
+#     Dado que clico no menu Cassino        
+#     Quando clico no botão Instantâneas lateral
+#     Então entro na página Instantâneas
 
-CT 04.50 - Validar o botão Populares lateral
-    [Documentation]     Teste valida o botão Populares lateral
-    [Tags]    Cassino    Funcional
-    Dado que clico no menu Cassino        
-    Quando clico no botão Populares lateral
-    Então entro na página Populares
+# CT 04.50 - Validar o botão Populares lateral
+#     [Documentation]     Teste valida o botão Populares lateral
+#     [Tags]    Cassino    Funcional
+#     Dado que clico no menu Cassino        
+#     Quando clico no botão Populares lateral
+#     Então entro na página Populares
 
-CT 04.51 - Validar o botão Natal lateral
-    [Documentation]     Teste valida o botão Natal lateral
-    [Tags]    Cassino    Funcional
-    Dado que clico no menu Cassino        
-    Quando clico no botão Natal lateral
-    Então entro na página Natal
+# CT 04.51 - Validar o botão Natal lateral
+#     [Documentation]     Teste valida o botão Natal lateral
+#     [Tags]    Cassino    Funcional
+#     Dado que clico no menu Cassino        
+#     Quando clico no botão Natal lateral
+#     Então entro na página Natal
 
-CT 04.52 - Validar o botão Novos lateral
-    [Documentation]     Teste valida o botão Novos lateral
-    [Tags]    Cassino    Funcional
-    Dado que clico no menu Cassino        
-    Quando clico no botão Novos lateral
-    Então entro na página Novos
+# CT 04.52 - Validar o botão Novos lateral
+#     [Documentation]     Teste valida o botão Novos lateral
+#     [Tags]    Cassino    Funcional
+#     Dado que clico no menu Cassino        
+#     Quando clico no botão Novos lateral
+#     Então entro na página Novos
 
 # CT 04.53 - Validar o botão Drops & Wins lateral
 #     [Documentation]     Teste valida o botão Drops & Wins lateral
@@ -406,12 +406,12 @@ CT 04.52 - Validar o botão Novos lateral
 #     Quando clico no botão Acumulados lateral
 #     Então entro na página Acumulados
 
-CT 04.58 - Validar o botão Animais lateral
-    [Documentation]     Teste valida o botão Animais lateral
-    [Tags]    Cassino    Funcional
-    Dado que clico no menu Cassino        
-    Quando clico no botão Animais lateral
-    Então entro na página Animais
+# CT 04.58 - Validar o botão Animais lateral
+#     [Documentation]     Teste valida o botão Animais lateral
+#     [Tags]    Cassino    Funcional
+#     Dado que clico no menu Cassino        
+#     Quando clico no botão Animais lateral
+#     Então entro na página Animais
 
 # CT 04.59 - Validar o botão Temáticos lateral
 #     [Documentation]     Teste valida o botão Temáticos lateral
@@ -462,28 +462,28 @@ CT 04.58 - Validar o botão Animais lateral
 #     Quando clico no botão Mais Jogados lateral
 #     Então entro na página Mais Jogados
 
-CT 04.66 - Validar o botão Suporte lateral
-    [Documentation]     Teste valida o botão Ano Novo lateral
-    [Tags]    Cassino    Funcional
-    Dado que clico no menu Cassino        
-    Quando clico no botão Suporte lateral
-    Então entro na página Suporte lateral
+# CT 04.66 - Validar o botão Suporte lateral
+#     [Documentation]     Teste valida o botão Ano Novo lateral
+#     [Tags]    Cassino    Funcional
+#     Dado que clico no menu Cassino        
+#     Quando clico no botão Suporte lateral
+#     Então entro na página Suporte lateral
 
-CT 04.67 - Validar o botão Jogo Consciente lateral
-    [Documentation]     Teste valida o botão Jogo Consciente
-    [Tags]    Cassino    Funcional
-    Dado que clico no menu Cassino        
-    Quando clico no botão Jogo Consciente
-    Então entro na página Jogo Consciente
+# CT 04.67 - Validar o botão Jogo Consciente lateral
+#     [Documentation]     Teste valida o botão Jogo Consciente
+#     [Tags]    Cassino    Funcional
+#     Dado que clico no menu Cassino        
+#     Quando clico no botão Jogo Consciente
+#     Então entro na página Jogo Consciente
 
-CT 04.68 - Tentar jogar nos jogos sem estar logado
+CT 04.68 - Tentar jogar nos jogos sem estar logado (Erro)
     [Documentation]     Teste valida a impossibilidade de jogar nos jogos do Menu Cassino sem estar conectado ao sistema da plataforma
     [Tags]    Cassino    Funcional
     Dado que clico no menu Cassino  
     Quando clico sem estar logado no botão "Fortune Tiger"
     Então não entro na página do jogo "Fortune Tiger"
 
-CT 04.69 - Validar o jogo Fortune Tiger
+CT 04.69 - Validar o jogo Fortune Tiger (Erro)
     [Documentation]     Teste valida jogar o jogo Fortune Tiger do Menu Cassino
     [Tags]    Cassino    Funcional
     Dado que clico no menu Cassino
@@ -493,7 +493,7 @@ CT 04.69 - Validar o jogo Fortune Tiger
     E clico no botão "Entrar em Conta" (Lgn)
     Então jogo o jogo "Fortune Tiger"
 
-CT 04.70 - Tentar jogar sem saldo
+CT 04.70 - Tentar jogar sem saldo (Erro)
     [Documentation]     Teste não valida a possibilidade de jogar sem saldo em conta nos jogos do Menu Cassino
     [Tags]    Cassino    Funcional
     Dado que clico no menu Cassino

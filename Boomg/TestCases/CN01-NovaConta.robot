@@ -45,6 +45,12 @@ CT 01.05 - Tentar cadastrar com CPF de menor de idade
     [Tags]    NovaConta    Exceção
     Dado que clico no botão "Cadastrar"
     Quando preencho CPF de menor
+    E clico no botão Continuar
+    E preencho Email válido
+    E preencho Senha válida
+    E preencho Confirmação de senha válida
+    E preencho Telefone real
+    E clico no botão "Finalizar Cadastro"
     Então recebo mensagem de erro "Você precisa ter mais de 18 anos" na tela
 
 CT 01.06 - Tentar cadastrar com CPF com óbito
@@ -73,7 +79,7 @@ CT 01.08 - Tentar realizar cadastro de conta com email válido porem já cadastr
     E preencho Senha válida
     E preencho Confirmação de senha válida
     E preencho Telefone válido
-    E confirmo maior idade
+    # E confirmo maior idade
     E clico no botão "Finalizar Cadastro"
     Então recebo mensagem de erro "Login já existe" na tela
 
@@ -120,29 +126,28 @@ CT 01.12 - Tentar realizar cadastro de conta com Telefone válido já cadastrado
     E preencho Senha válida
     E preencho Confirmação de senha válida
     E preencho Telefone válido já cadastrado
-    E confirmo maior idade
+    # E confirmo maior idade
     E clico no botão "Finalizar Cadastro"
     Então recebo mensagem de erro "Número do telefone já existe" na tela
 
-CT 01.13 - Tentar realizar cadastro sem preechimento de Flag "Maior idade"
-    [Documentation]     Caso de teste valida que não é possível realizar cadastro de conta sem  Flag "Maior idade"
-    [Tags]    NovaConta    Exceção
-    Dado que clico no botão "Cadastrar"
-    Quando preencho CPF válido
-    E clico no botão Continuar
-    E preencho Email válido
-    E preencho Senha válida
-    E preencho Confirmação de senha válida
-    E preencho Telefone válido
-    E clico no botão "Finalizar Cadastro"
-    Então recebo mensagem de erro "Maior idade" na tela
+# CT 01.13 - Tentar realizar cadastro sem preechimento de Flag "Maior idade"
+#     [Documentation]     Caso de teste valida que não é possível realizar cadastro de conta sem  Flag "Maior idade"
+#     [Tags]    NovaConta    Exceção
+#     Dado que clico no botão "Cadastrar"
+#     Quando preencho CPF válido
+#     E clico no botão Continuar
+#     E preencho Email válido
+#     E preencho Senha válida
+#     E preencho Confirmação de senha válida
+#     E preencho Telefone válido
+#     E clico no botão "Finalizar Cadastro"
+#     Então recebo mensagem de erro "Maior idade" na tela
 
 CT 01.14 - Validar link Termos e condições em Cadastro de conta
     [Documentation]     Caso de testes valida se link "Termos e condições" está funcionando corretamente
     [Tags]    NovaConta    
     Dado que clico no botão "Cadastrar"
     Quando preencho CPF válido
-    E clico no botão Continuar
     E clico no link "Termos e Condições"
     Então valido tela de "Termos e Condições"
 

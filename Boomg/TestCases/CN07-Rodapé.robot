@@ -35,8 +35,8 @@ CT 07.05 - Validar o botão Jogo Consciente
     Dado que clico no botão Jogo Consciente
     Então entro na página Jogo Consciente (Rodapé)
 
-CT 07.06 - Validar o botão Jogo Promoções
-    [Documentation]     Teste valida o botão Jogo Promoções
+CT 07.06 - Validar o botão Promoções
+    [Documentation]     Teste valida o botão Promoções
     [Tags]    Rodapé    Funcional        
     Dado que clico no botão Promoções
     Então entro na página Promoções
@@ -65,7 +65,7 @@ CT 07.10 - Validar o botão Regras e Procedimentos
     Dado que clico no botão Regras e Procedimentos
     Então entro na página Regras e Procedimentos
 
-CT 07.11 - Validar o botão GAMING CURACAO (Erro)
+CT 07.11 - Validar o botão GAMING CURACAO (Ero)
     [Documentation]     Teste valida o botão GAMING CURACAO
     [Tags]    Rodapé    Funcional        
     Dado que clico no botão GAMING CURACAO

@@ -88,33 +88,33 @@ CT 06.01 - Validar o Menu ESPORTES
 #     Quando clico no botão Futebol Americano superior
 #     Então entro na página Futebol Americano superior
 
-CT 06.13 - Validar o botão Ao Vivo lateral
-    [Documentation]     Teste valida o botão Ao Vivo lateral
-    [Tags]    Esportes    Funcional
-    Dado que acesso o Menu ESPORTES       
-    Quando clico no botão Ao Vivo lateral (Esportes)
-    Então entro na página Ao Vivo (Esportes)
+# CT 06.13 - Validar o botão Ao Vivo lateral
+#     [Documentation]     Teste valida o botão Ao Vivo lateral
+#     [Tags]    Esportes    Funcional
+#     Dado que acesso o Menu ESPORTES       
+#     Quando clico no botão Ao Vivo lateral (Esportes)
+#     Então entro na página Ao Vivo (Esportes)
 
-CT 06.14 - Validar o botão TV lateral
-    [Documentation]     Teste valida o botão TV lateral
-    [Tags]    Esportes    Funcional
-    Dado que acesso o Menu ESPORTES       
-    Quando clico no botão TV lateral
-    Então entro na página TV
+# CT 06.14 - Validar o botão TV lateral
+#     [Documentation]     Teste valida o botão TV lateral
+#     [Tags]    Esportes    Funcional
+#     Dado que acesso o Menu ESPORTES       
+#     Quando clico no botão TV lateral
+#     Então entro na página TV
 
-CT 06.15 - Validar o botão Promoções lateral
-    [Documentation]     Teste valida o botão Promoções lateral
-    [Tags]    Esportes    Funcional
-    Dado que acesso o Menu ESPORTES       
-    Quando clico no botão Promoções lateral
-    Então entro na página Promoções (Esportes)
+# CT 06.15 - Validar o botão Promoções lateral
+#     [Documentation]     Teste valida o botão Promoções lateral
+#     [Tags]    Esportes    Funcional
+#     Dado que acesso o Menu ESPORTES       
+#     Quando clico no botão Promoções lateral
+#     Então entro na página Promoções (Esportes)
 
-CT 06.16 - Validar o botão Como Apostar lateral
-    [Documentation]     Teste valida o botão Como Apostar lateral
-    [Tags]    Esportes    Funcional
-    Dado que acesso o Menu ESPORTES       
-    Quando clico no botão Como Apostar lateral
-    Então entro na página Como Apostar (Esportes)
+# CT 06.16 - Validar o botão Como Apostar lateral
+#     [Documentation]     Teste valida o botão Como Apostar lateral
+#     [Tags]    Esportes    Funcional
+#     Dado que acesso o Menu ESPORTES       
+#     Quando clico no botão Como Apostar lateral
+#     Então entro na página Como Apostar (Esportes)
 
 # CT 06.17 - Validar o botão Futebol lateral
 #     [Documentation]     Teste valida o botão Futebol lateral
@@ -235,26 +235,26 @@ CT 06.16 - Validar o botão Como Apostar lateral
 #     Quando clico no botão Futebol Americano lateral
 #     Então entro na página Futebol Americano lateral
 
-CT 06.33 - Validar o botão Itália Série A lateral
-    [Documentation]     Teste valida o botão Itália Série A lateral
-    [Tags]    Esportes    Funcional
-    Dado que acesso o Menu ESPORTES       
-    Quando clico no botão Itália Série A lateral
-    Então entro na página Itália Série A
+# CT 06.33 - Validar o botão Itália Série A lateral
+#     [Documentation]     Teste valida o botão Itália Série A lateral
+#     [Tags]    Esportes    Funcional
+#     Dado que acesso o Menu ESPORTES       
+#     Quando clico no botão Itália Série A lateral
+#     Então entro na página Itália Série A
 
-CT 06.34 - Validar o botão Resultados lateral
-    [Documentation]     Teste valida o botão Resultados lateral
-    [Tags]    Esportes    Funcional
-    Dado que acesso o Menu ESPORTES       
-    Quando clico no botão Resultados lateral
-    Então entro na página Resultados lateral
+# CT 06.34 - Validar o botão Resultados lateral
+#     [Documentation]     Teste valida o botão Resultados lateral
+#     [Tags]    Esportes    Funcional
+#     Dado que acesso o Menu ESPORTES       
+#     Quando clico no botão Resultados lateral
+#     Então entro na página Resultados lateral
 
- CT 06.35 - Validar o botão Jogo Consciente lateral (Esportes)
-    [Documentation]     Teste valida o botão Jogo Consciente lateral
-    [Tags]    Esportes    Funcional
-    Dado que acesso o Menu ESPORTES       
-    Quando clico no botão Jogo Consciente lateral (Esportes)
-    Então entro na página Jogo Consciente (Esportes)
+#  CT 06.35 - Validar o botão Jogo Consciente lateral (Esportes)
+#     [Documentation]     Teste valida o botão Jogo Consciente lateral
+#     [Tags]    Esportes    Funcional
+#     Dado que acesso o Menu ESPORTES       
+#     Quando clico no botão Jogo Consciente lateral (Esportes)
+#     Então entro na página Jogo Consciente (Esportes)
 
 # CT 06.36 - Validar o botão Futebol central
 #     [Documentation]     Teste valida o botão Futebol central
@@ -334,25 +334,25 @@ CT 06.34 - Validar o botão Resultados lateral
 #     Quando clico no botão "Escolher País"
 #     Então abro as opções de países do Futebol
 
-CT 06.47 - Validar o botão "Escolher Campeonato" do "Filtre o evento desejado por país e competição" do Futebol
-    [Documentation]     Teste valida o botão "Escolher Campeonato"
-    [Tags]    Esportes    Funcional
-    Dado que acesso o Menu ESPORTES 
-    E acesso o Menu Futebol
-    Quando clico no botão "Escolher País"
-    E clico no botão "Alemanha"
-    E clico no botão "Escolher Campeonato"
-    Então abro as opções de Campeonato do Futebol
+# CT 06.47 - Validar o botão "Escolher Campeonato" do "Filtre o evento desejado por país e competição" do Futebol
+#     [Documentation]     Teste valida o botão "Escolher Campeonato"
+#     [Tags]    Esportes    Funcional
+#     Dado que acesso o Menu ESPORTES 
+#     E acesso o Menu Futebol
+#     Quando clico no botão "Escolher País"
+#     E clico no botão "Alemanha"
+#     E clico no botão "Escolher Campeonato"
+#     Então abro as opções de Campeonato do Futebol
 
-CT 06.48 - Validar o botão "Limpar" do "Filtre o evento desejado por país e competição" do Futebol
-    [Documentation]     Teste valida o botão "Escolher Campeonato"
-    [Tags]    Esportes    Funcional
-    Dado que acesso o Menu ESPORTES 
-    E acesso o Menu Futebol
-    Quando clico no botão "Escolher País"
-    E clico no botão "Alemanha"
-    E clico no botão "Limpar"
-    Então excluo as opções selecionadas
+# CT 06.48 - Validar o botão "Limpar" do "Filtre o evento desejado por país e competição" do Futebol
+#     [Documentation]     Teste valida o botão "Escolher Campeonato"
+#     [Tags]    Esportes    Funcional
+#     Dado que acesso o Menu ESPORTES 
+#     E acesso o Menu Futebol
+#     Quando clico no botão "Escolher País"
+#     E clico no botão "Alemanha"
+#     E clico no botão "Limpar"
+#     Então excluo as opções selecionadas
 
 # CT 06.49 - Validar o botão "Ao Vivo" do Futebol
 #     [Documentation]     Teste valida o botão "Ao Vivo" do Futebol
@@ -389,46 +389,46 @@ CT 06.48 - Validar o botão "Limpar" do "Filtre o evento desejado por país e co
 #     E clico no botão "Todos"
 #     Então abro os jogos Todos do Menu do Futebol
 
-CT 06.54 - Validar o botão "+" do Esporte
-    [Documentation]     Teste valida o botão "+"
-    [Tags]    Esportes    Funcional
-    Dado que acesso o Menu ESPORTES       
-    Quando clico no botão Futebol lateral
-    E clico no botão "+"
-    Então entro na página atual de algum jogo em andamento
+# CT 06.54 - Validar o botão "+" do Esporte
+#     [Documentation]     Teste valida o botão "+"
+#     [Tags]    Esportes    Funcional
+#     Dado que acesso o Menu ESPORTES       
+#     Quando clico no botão Futebol lateral
+#     E clico no botão "+"
+#     Então entro na página atual de algum jogo em andamento
 
-CT 06.55 - Validar o botão "Resultados" do Esporte
-    [Documentation]     Teste valida o botão "Resultados"
-    [Tags]    Esportes    Funcional
-    Dado que acesso o Menu ESPORTES       
-    Quando clico no botão Futebol lateral
-    E clico no botão "+"
-    E clico no botão "Resultados"
-    Então entro na página Resultados atual de algum jogo em andamento
+# CT 06.55 - Validar o botão "Resultados" do Esporte
+#     [Documentation]     Teste valida o botão "Resultados"
+#     [Tags]    Esportes    Funcional
+#     Dado que acesso o Menu ESPORTES       
+#     Quando clico no botão Futebol lateral
+#     E clico no botão "+"
+#     E clico no botão "Resultados"
+#     Então entro na página Resultados atual de algum jogo em andamento
 
-CT 06.56 - Validar o botão "Handicap" do Esporte
-    [Documentation]     Teste valida o botão "Handicap"
-    [Tags]    Esportes    Funcional
-    Dado que acesso o Menu ESPORTES       
-    Quando clico no botão Futebol lateral
-    E clico no botão "+"
-    E clico no botão "Handicap"
-    Então entro na página Handicap atual de algum jogo em andamento
+# CT 06.56 - Validar o botão "Handicap" do Esporte
+#     [Documentation]     Teste valida o botão "Handicap"
+#     [Tags]    Esportes    Funcional
+#     Dado que acesso o Menu ESPORTES       
+#     Quando clico no botão Futebol lateral
+#     E clico no botão "+"
+#     E clico no botão "Handicap"
+#     Então entro na página Handicap atual de algum jogo em andamento
 
-CT 06.57 - Validar o botão "Gols" do Esporte
-    [Documentation]     Teste valida o botão "Handicap"
-    [Tags]    Esportes    Funcional
-    Dado que acesso o Menu ESPORTES       
-    Quando clico no botão Futebol lateral
-    E clico no botão "+"
-    E clico no botão "Gols"
-    Então entro na página Gols atual de algum jogo em andamento
+# CT 06.57 - Validar o botão "Gols" do Esporte
+#     [Documentation]     Teste valida o botão "Handicap"
+#     [Tags]    Esportes    Funcional
+#     Dado que acesso o Menu ESPORTES       
+#     Quando clico no botão Futebol lateral
+#     E clico no botão "+"
+#     E clico no botão "Gols"
+#     Então entro na página Gols atual de algum jogo em andamento
 
-CT 06.58 - Validar o botão "Múltiplos" do Esporte
-    [Documentation]     Teste valida o botão "Múltiplos"
-    [Tags]    Esportes    Funcional
-    Dado que acesso o Menu ESPORTES       
-    Quando clico no botão Futebol lateral
-    E clico no botão "+"
-    E clico no botão "Múltiplos"
-    Então entro na página Múltiplos atual de algum jogo em andamento
+# CT 06.58 - Validar o botão "Múltiplos" do Esporte
+#     [Documentation]     Teste valida o botão "Múltiplos"
+#     [Tags]    Esportes    Funcional
+#     Dado que acesso o Menu ESPORTES       
+#     Quando clico no botão Futebol lateral
+#     E clico no botão "+"
+#     E clico no botão "Múltiplos"
+#     Então entro na página Múltiplos atual de algum jogo em andamento

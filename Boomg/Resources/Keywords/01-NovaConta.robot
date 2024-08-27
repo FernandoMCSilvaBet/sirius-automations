@@ -2,7 +2,7 @@
 Documentation      Modúlo de cadastro do usuário no sistema Boomg
 Resource           ../Main.robot
 
-*** Variable ***
+*** Variables ***
 # Para rodar o primeiro cenário, é necessário atualizar os 3 primeiras variáveis
 ${CPFReal}                  02988585253
 ${EmailReal}                teste@teste7.com.br
@@ -77,9 +77,9 @@ Quando preencho CPF de menor
     Input Text                      locator=${CampoCPF}       text=${CPFMenor}
 
 Então recebo mensagem de erro "Você precisa ter mais de 18 anos" na tela
-    Press Key                       ${CampoCPF}    \\09
-    Sleep    7s
-    Wait Until Element Is Visible    //span[contains(.,'Você precisa ter mais de 18 anos')]
+    # Press Key                       ${CampoCPF}    \\09
+    # Sleep    7s
+    Wait Until Element Is Visible    //div[@class='notyf__message'][contains(.,'Idade não permitida! (Você precisa ter 18 anos ou mais)')]
     Capture Page Screenshot    CT1.5.png
 
 # -- 1.6
@@ -130,7 +130,7 @@ E preencho Senha inválida
 Então recebo mensagem de erro "Senha inválida" na tela
     Wait Until Element Is Visible     //span[contains(.,'Senha precisa ter no mínimo 8 caracteres')]
     Click Element                     locator=//span[contains(.,'Senha precisa ter no mínimo 8 caracteres')]
-    Wait Until Element Is Visible     //div[@class='v-popper__inner'][contains(.,'Sua senha deve conter pelo menos: Uma letra (maiúscula e minúscula) Um Número Mínimo 8 caracteres')]
+    Wait Until Element Is Visible     //p[contains(.,'Sua senha deve conter pelo menos:')]
     Capture Page Screenshot    CT1.9.png
 
 # -- 1.10
@@ -166,7 +166,7 @@ Então recebo mensagem de erro "Maior idade" na tela
 # -- 1.14
 E clico no link "Termos e Condições"
     Wait Until Element Is Visible     locator=//span[@class='terms-conditions'][contains(.,'Termos e Condições')]
-    Click Element                     locator=(//span[contains(.,'Termos e Condições')])[2]
+    Click Element                     locator=(//span[contains(.,'Termos e Condições')])[1]
 
 Então valido tela de "Termos e Condições"
     Wait Until Element Is Visible     locator=//span[contains(.,'10.1 Se uma regra específica do esporte contradizer uma regra geral, a regra geral não será aplicada.')]
@@ -187,7 +187,7 @@ E clico em fechar
 
 E clico em "Continuar com o cadastro"
     Click Element                     locator=//span[contains(.,'Continuar com o cadastro')]
-    Wait Until Element Is Visible     //div[@class='we-checkbox-label'][contains(.,'Aceito receber novidades e ofertas por SMS')]
+    Wait Until Element Is Visible     (//div[contains(@class,'banner')])[3]
 
 Então clico em "Desistir do cadastro"
     Capture Page Screenshot    CT1.16.png

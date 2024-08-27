@@ -2,28 +2,28 @@
 Documentation      Modúlo de Cassino do usuário no sistema Boomg
 Resource           ../Main.robot
 
-*** Variable ***
+*** Variables ***
 ${originais_superior}             //div[@class='we-nav-section-title'][contains(.,'Originais')]
 ${originais_lateral}              (//span[contains(@class,'item-title')])[8]
-${crashgames_superior}            //div[@class='we-nav-section-title'][contains(.,'Crash Games')]
-${cassino_superior}               //div[@class='we-nav-section-title'][contains(.,'Cassino')]
-${instantaneas_superior}          //div[@class='we-nav-section-title'][contains(.,'Instantâneas')]
-${populares_superior}             //div[@class='we-nav-section-title'][contains(.,'Populares')]
-${natal_superior}                 //div[@class='we-nav-section-title'][contains(.,'Natal')]
-${novos_superior}                 //div[@class='we-nav-section-title'][contains(.,'Novos')]
-${drops&wins_superior}            //div[@class='we-nav-section-title'][contains(.,'Drops & Wins')]
-${multilinhas_superior}           //div[@class='we-nav-section-title'][contains(.,'Multi Linhas')]
-${compradebonus_superior}         //div[@class='we-nav-section-title'][contains(.,'Compra de Bônus')]
-${epicos_superior}                //div[@class='we-nav-section-title'][contains(.,'Épicos')]
-${acumulados_superior}            //div[@class='we-nav-section-title'][contains(.,'Acumulados')]
-${animais_superior}               //div[@class='we-nav-section-title'][contains(.,'Animais')]
-${tematicos_superior}             //div[@class='we-nav-section-title'][contains(.,'Temáticos')]
-${esportivos_superior}            //div[@class='we-nav-section-title'][contains(.,'Esportivos')]
-${videobingo_superior}            //div[@class='we-nav-section-title'][contains(.,'Vídeo Bingo')]
-${videopoker_superior}            //div[@class='we-nav-section-title'][contains(.,'Vídeo Poker')]
-${anonovo_superior}               //div[@class='we-nav-section-title'][contains(.,'Ano Novo')]
-${testeposicao_superior}          //div[@class='we-nav-section-title'][contains(.,'Teste Posicao')]
-${maisjogados_superior}           //div[@class='we-nav-section-title'][contains(.,'Mais Jogados')]
+${crashgames_superior}            //div[@class='we-nav-section-wrapper'][contains(.,'Crash Games')]
+${cassino_superior}               //div[@class='we-nav-section-wrapper'][contains(.,'Cassino')]
+${instantaneas_superior}          //div[@class='we-nav-section-wrapper'][contains(.,'Instantâneas')]
+${populares_superior}             //div[@class='we-nav-section-wrapper'][contains(.,'Populares')]
+${natal_superior}                 //div[@class='we-nav-section-wrapper'][contains(.,'Natal')]
+${novos_superior}                 //div[@class='we-nav-section-wrapper'][contains(.,'Novos')]
+${drops&wins_superior}            //div[@class='we-nav-section-wrapper'][contains(.,'Drops & Wins')]
+${multilinhas_superior}           //div[@class='we-nav-section-wrapper'][contains(.,'Multi Linhas')]
+${compradebonus_superior}         //div[@class='we-nav-section-wrapper'][contains(.,'Compra de Bônus')]
+${epicos_superior}                //div[@class='we-nav-section-wrapper'][contains(.,'Épicos')]
+${acumulados_superior}            //div[@class='we-nav-section-wrapper'][contains(.,'Acumulados')]
+${animais_superior}               //div[@class='we-nav-section-wrapper'][contains(.,'Animais')]
+${tematicos_superior}             //div[@class='we-nav-section-wrapper'][contains(.,'Temáticos')]
+${esportivos_superior}            //div[@class='we-nav-section-wrapper'][contains(.,'Esportivos')]
+${videobingo_superior}            //div[@class='we-nav-section-wrapper'][contains(.,'Vídeo Bingo')]
+${videopoker_superior}            //div[@class='we-nav-section-wrapper'][contains(.,'Vídeo Poker')]
+${anonovo_superior}               //div[@class='we-nav-section-wrapper'][contains(.,'Ano Novo')]
+${testeposicao_superior}          //div[@class='we-nav-section-wrapper'][contains(.,'Teste Posicao')]
+${maisjogados_superior}           //div[@class='we-nav-section-wrapper'][contains(.,'Mais Jogados')]
 
 ${originais_central}              //div[@class='category-resume__title-text'][contains(.,'Originais')]
 ${crashgames_central}             (//div[contains(.,'Crash Games')])[9]
@@ -685,9 +685,10 @@ Então entro na página Suporte lateral
 
 # --4.67
 Quando clico no botão Jogo Consciente
-    Click Element                    (//div[contains(@class,'img')])[1]
-    Wait Until Element Is Visible    //span[@class='sidebar_nav__item-title'][contains(.,'Jogo Consciente')]
-    Click Element                    //span[@class='sidebar_nav__item-title'][contains(.,'Jogo Consciente')]
+    Execute Javascript               ${SCROLL_BAIXO}
+    Wait Until Element Is Visible    //a[contains(.,'Jogo Consciente')]
+    Click Element                    //a[contains(.,'Jogo Consciente')]
+    Wait Until Element Is Visible    //h1[contains(.,'Jogo Consciente')]
 
 Então entro na página Jogo Consciente
     Wait Until Element Is Visible   //div[@class='container'][contains(.,'Jogo ConscienteGarantindo que todos apostem de maneira responsável.')]

@@ -3,7 +3,7 @@ Documentation      Modúlo de Esportes do usuário no sistema Boomg
 Resource           ../Main.robot
 
 
-*** Variable ***
+*** Variables ***
 ${futebol_superior}                   (//div[@class='we-nav-section-title'])[2]
 ${tenisdemesa_superior}               //div[@class='we-nav-section-title'][contains(.,'Tênis de Mesa')]
 ${tenis_superior}                     //div[@class='we-nav-section-title'][contains(.,'Tênis')]
@@ -67,7 +67,7 @@ ${botao_aindahoje}                    //a[contains(.,'Ainda Hoje')]
 ${botao_amanha}                       //a[contains(.,'Amanhã')]
 ${botao_proximosdias}                 //a[contains(.,'Próximos dias')]
 ${botao_todos}                        //a[contains(.,'Todos')]
-${entrar_esportes}                    //span[contains(.,'Ao Vivo')]
+${entrar_esportes}                    //div[@class='sports-landing-page-wrapper'][contains(.,'EM BREVE!Em breve você poderá apostar no seu esporte favorito aqui na Boomg!')]
 ${entro_futebol}                      //h1[contains(.,'Futebol')]
 ${entro_tenisdemesa}                  //h1[contains(.,'Tênis de Mesa')]
 ${entro_tenis}                        //h1[@class='page-sports__detail__banner__title h1'][contains(.,'Tênis')]
@@ -81,7 +81,7 @@ ${entro_baseball}                     //span[@itemprop='name'][contains(.,'Baseb
 ${entro_futebolamericano}             //span[@itemprop='name'][contains(.,'Futebol Americano')]
 ${entro_internacionalfutebol}         //h1[contains(.,'Internacional')]
 ${entro_aovivo}                       //span[@itemprop='name'][contains(.,'Ao Vivo')]
-${entro_tv}                           //h1[contains(.,'TV')]
+${entro_tv}                           //div[@class='sports-landing-page-wrapper'][contains(.,'EM BREVE!Em breve você poderá apostar no seu esporte favorito aqui na Boomg!')]
 ${entro_promoçoes}                    //h1[contains(.,'Promoções')]
 ${entro_comoapostar}                  //h1[contains(.,'Como Apostar')]
 ${entro_brasil}                       //h2[contains(.,'Destaques ao vivo')]
@@ -426,10 +426,10 @@ Então entro na página Futebol Americano lateral
 Quando clico no botão Itália Série A lateral
     Execute Javascript              window.scrollTo(0, document.body.scrollHeight); 
     Wait Until Element Is Visible    ${italiaseriea_lateral}
-    Click Element                    ${italiaseriea_lateral}
+    Execute Javascript               ${italiaseriea_lateral}
 
 Então entro na página Itália Série A
-    Wait Until Element Is Visible    //span[@itemprop='name'][contains(.,'Campeonato Italiano Série A')]
+    Wait Until Element Is Visible    //div[@class='sports-landing-page-wrapper'][contains(.,'EM BREVE!Em breve você poderá apostar no seu esporte favorito aqui na Boomg!')]
     # Capture Page Screenshot    CT6.33.png 
 
 

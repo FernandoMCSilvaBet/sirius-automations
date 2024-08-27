@@ -2,7 +2,7 @@
 Documentation      Modúlo de validação dos jogos do Cassino
 Resource           ../Main.robot
 
-*** Variable ***
+*** Variables ***
 ${AVIATOR}                  AVIATOR
 ${FORTUNE_TIGER}            FORTUNE TIGER
 ${SPACEMAN}                 SPACEMAN
@@ -90,12 +90,13 @@ ${CARNAVAL}                 CARNAVAL
 
 ${carrego_jogo}             //div[contains(@class,'cover')]
 ${abro_jogo}                //div[contains(@class,'title')]
-${locator_botao_jogar}      (//span[contains(.,'JOGAR')])[1]
+${locator_botao_jogar}      //p[@class='bottom-line']
 
 
 *** Keywords ***
 # --0.1
 Dado que clico em Pesquisar
+    Sleep    2s
     Click Element                      ${BOTAO_PESQUISAR}
     Sleep    2s
 
